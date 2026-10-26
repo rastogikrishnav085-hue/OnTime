@@ -1,0 +1,249 @@
+{
+  "generated_utc": "2026-10-26T08:03:45+00:00",
+  "source": "Original Olist CSVs in data/raw; audit is read-only",
+  "missing_files": [],
+  "all_nine_present": true,
+  "tables": {
+    "olist_customers_dataset.csv": {
+      "rows": 99441,
+      "columns": 5,
+      "column_names": [
+        "customer_id",
+        "customer_unique_id",
+        "customer_zip_code_prefix",
+        "customer_city",
+        "customer_state"
+      ],
+      "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2",
+      "bytes": 9033957,
+      "key_columns": [
+        "customer_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    },
+    "olist_geolocation_dataset.csv": {
+      "rows": 1000163,
+      "columns": 5,
+      "column_names": [
+        "geolocation_zip_code_prefix",
+        "geolocation_lat",
+        "geolocation_lng",
+        "geolocation_city",
+        "geolocation_state"
+      ],
+      "sha256": "b514f6fc991b9566aeba02aa5d67e2c3630f034b60a0e05aa0d082a3b66d88d6",
+      "bytes": 61273883,
+      "key_columns": [],
+      "rows_with_missing_key": null,
+      "duplicate_key_rows": null,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    },
+    "olist_order_items_dataset.csv": {
+      "rows": 112650,
+      "columns": 7,
+      "column_names": [
+        "order_id",
+        "order_item_id",
+        "product_id",
+        "seller_id",
+        "shipping_limit_date",
+        "price",
+        "freight_value"
+      ],
+      "sha256": "0bc4d068c4fe38cbb01bd90e8746e3c613fe7b4baef75fab7b0e329701c3e279",
+      "bytes": 15438671,
+      "key_columns": [
+        "order_id",
+        "order_item_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    },
+    "olist_order_payments_dataset.csv": {
+      "rows": 103886,
+      "columns": 5,
+      "column_names": [
+        "order_id",
+        "payment_sequential",
+        "payment_type",
+        "payment_installments",
+        "payment_value"
+      ],
+      "sha256": "4f713964f2815dbbaa40b9488268c55aac3627bfce5aa96cf58d1f3616de3cc0",
+      "bytes": 5777138,
+      "key_columns": [
+        "order_id",
+        "payment_sequential"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    },
+    "olist_order_reviews_dataset.csv": {
+      "rows": 99224,
+      "columns": 7,
+      "column_names": [
+        "review_id",
+        "order_id",
+        "review_score",
+        "review_comment_title",
+        "review_comment_message",
+        "review_creation_date",
+        "review_answer_timestamp"
+      ],
+      "sha256": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7",
+      "bytes": 14451670,
+      "key_columns": [
+        "review_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 814,
+      "columns_with_nulls": {
+        "review_comment_title": 87656,
+        "review_comment_message": 58247
+      },
+      "date_ranges": {
+        "review_creation_date": {
+          "min": "2016-10-02 00:00:00",
+          "max": "2018-08-31 00:00:00",
+          "nulls": 0
+        },
+        "review_answer_timestamp": {
+          "min": "2016-10-07 18:32:28",
+          "max": "2018-10-29 12:27:35",
+          "nulls": 0
+        }
+      }
+    },
+    "olist_orders_dataset.csv": {
+      "rows": 99441,
+      "columns": 8,
+      "column_names": [
+        "order_id",
+        "customer_id",
+        "order_status",
+        "order_purchase_timestamp",
+        "order_approved_at",
+        "order_delivered_carrier_date",
+        "order_delivered_customer_date",
+        "order_estimated_delivery_date"
+      ],
+      "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf",
+      "bytes": 17654914,
+      "key_columns": [
+        "order_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {
+        "order_approved_at": 160,
+        "order_delivered_carrier_date": 1783,
+        "order_delivered_customer_date": 2965
+      },
+      "date_ranges": {
+        "order_purchase_timestamp": {
+          "min": "2016-09-04 21:15:19",
+          "max": "2018-10-17 17:30:18",
+          "nulls": 0
+        },
+        "order_approved_at": {
+          "min": "2016-09-15 12:16:38",
+          "max": "2018-09-03 17:40:06",
+          "nulls": 160
+        },
+        "order_delivered_carrier_date": {
+          "min": "2016-10-08 10:34:01",
+          "max": "2018-09-11 19:48:28",
+          "nulls": 1783
+        },
+        "order_delivered_customer_date": {
+          "min": "2016-10-11 13:46:32",
+          "max": "2018-10-17 13:22:46",
+          "nulls": 2965
+        },
+        "order_estimated_delivery_date": {
+          "min": "2016-09-30 00:00:00",
+          "max": "2018-11-12 00:00:00",
+          "nulls": 0
+        }
+      }
+    },
+    "olist_products_dataset.csv": {
+      "rows": 32951,
+      "columns": 9,
+      "column_names": [
+        "product_id",
+        "product_category_name",
+        "product_name_lenght",
+        "product_description_lenght",
+        "product_photos_qty",
+        "product_weight_g",
+        "product_length_cm",
+        "product_height_cm",
+        "product_width_cm"
+      ],
+      "sha256": "3e6569628a17fbc75fd206ee357b59e20364b9afa90f5b6cd5b4d624c58aa9cc",
+      "bytes": 2379446,
+      "key_columns": [
+        "product_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {
+        "product_category_name": 610,
+        "product_name_lenght": 610,
+        "product_description_lenght": 610,
+        "product_photos_qty": 610,
+        "product_weight_g": 2,
+        "product_length_cm": 2,
+        "product_height_cm": 2,
+        "product_width_cm": 2
+      },
+      "date_ranges": {}
+    },
+    "olist_sellers_dataset.csv": {
+      "rows": 3095,
+      "columns": 4,
+      "column_names": [
+        "seller_id",
+        "seller_zip_code_prefix",
+        "seller_city",
+        "seller_state"
+      ],
+      "sha256": "1f643d2b950373b85735e7794b20986f528d7a000432e7c6f9bcbb44d0846a0e",
+      "bytes": 174703,
+      "key_columns": [
+        "seller_id"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    },
+    "product_category_name_translation.csv": {
+      "rows": 71,
+      "columns": 2,
+      "column_names": [
+        "product_category_name",
+        "product_category_name_english"
+      ],
+      "sha256": "a81f0d1f27b27e7293f761bc79e3ce8f348ee39c4b3ed3e49bde38f478586278",
+      "bytes": 2613,
+      "key_columns": [
+        "product_category_name"
+      ],
+      "rows_with_missing_key": 0,
+      "duplicate_key_rows": 0,
+      "columns_with_nulls": {},
+      "date_ranges": {}
+    }
+  },
+  "interpretation": "Multiple rows per order are expected in items, payments, reviews and geolocation. Duplicate-key counts are checks, not automatic errors. Raw files were not modified."
+}

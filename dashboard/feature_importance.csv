@@ -1,0 +1,16 @@
+,importance
+purchase_month,0.033068784
+n_distinct_sellers,0.025074985
+customer_state_SP,0.018935876
+promised_delivery_days,0.018067626
+customer_state_historical_delay_rate,0.017618574
+same_state,0.017261177
+customer_state_MG,0.015486421
+product_category_books_technical,0.014531183
+customer_state_PR,0.013994884
+customer_state_AL,0.012840398
+product_category_home_confort,0.012772629
+seller_state_SP,0.012674862
+customer_state_BA,0.012393174
+seller_state_RJ,0.011904305
+seller_state_RS,0.011196774

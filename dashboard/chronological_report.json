@@ -1,0 +1,83 @@
+{
+  "generated_utc": "2026-10-24T07:25:47.492206+00:00",
+  "data": "Real Olist only for checkout model; synthetic weather/tracking excluded",
+  "split": {
+    "train": {
+      "n": 62705,
+      "start": "2016-09-15 12:16:38",
+      "end": "2018-03-23 19:48:26",
+      "late_rate": 0.09033
+    },
+    "validation": {
+      "n": 14471,
+      "start": "2018-03-23 19:57:14",
+      "end": "2018-05-26 18:16:57",
+      "late_rate": 0.07885
+    },
+    "test": {
+      "n": 19294,
+      "start": "2018-05-26 18:18:03",
+      "end": "2018-08-29 15:00:37",
+      "late_rate": 0.05292
+    }
+  },
+  "test_models": {
+    "enriched_xgb": {
+      "roc_auc": 0.71679,
+      "pr_auc": 0.10244,
+      "brier": 0.33719,
+      "threshold_from_validation": 0.73313,
+      "precision": 0.09974,
+      "recall": 0.45348,
+      "f1": 0.16352,
+      "confusion": {
+        "tn": 14094,
+        "fp": 4179,
+        "fn": 558,
+        "tp": 463
+      },
+      "recall_top10pct": 0.18707,
+      "calibrated_brier": 0.05629,
+      "calibration_ece": 0.05017,
+      "calibration_method": "isotonic fit on chronological validation block only"
+    },
+    "v4_ensemble_core": {
+      "roc_auc": 0.590705993380513,
+      "pr_auc": 0.0661835157388851
+    }
+  },
+  "paired_auc_difference_vs_v4_ensemble": {
+    "mean": 0.12568529390036054,
+    "ci95": [
+      0.11076969682015637,
+      0.14175178239226344
+    ],
+    "bootstrap_resamples": 500
+  },
+  "rolling_backtest": {
+    "mean_auc": {
+      "enriched_xgb": 0.75458,
+      "v4_xgboost_core": 0.70695
+    },
+    "enriched_wins": 2,
+    "n_months": 3,
+    "enriched_wins_share": 0.667
+  },
+  "calibration": {
+    "test": {
+      "ece_calibrated": 0.05017,
+      "brier_calibrated": 0.05629,
+      "base_rate_brier": 0.05012
+    }
+  },
+  "decision": {
+    "serve": "enriched",
+    "checks": {
+      "chronological_auc_improves_vs_core": true,
+      "paired_auc_ci_above_zero": true,
+      "rolling_backtest_mean_higher": true,
+      "calibration_drift_warning": true
+    },
+    "reason": "Serve the enriched XGBoost because it materially improves chronological ranking over the core ensemble (paired AUC gain +0.126, 95% CI 0.111 to 0.142) and wins the later-month rolling backtest in 2/3 months. The 0.90 target was not reached; validation-only calibration shows drift, so calibrated probabilities must be treated cautiously and refreshed with recent labelled operational data."
+  }
+}

@@ -1,0 +1,865 @@
+{
+ "n_orders": 96470,
+ "base_rate": 8.11,
+ "monthly": [
+  {
+   "month": "2016-10",
+   "rate": 1.13,
+   "count": 265
+  },
+  {
+   "month": "2017-01",
+   "rate": 3.07,
+   "count": 750
+  },
+  {
+   "month": "2017-02",
+   "rate": 3.21,
+   "count": 1653
+  },
+  {
+   "month": "2017-03",
+   "rate": 5.58,
+   "count": 2546
+  },
+  {
+   "month": "2017-04",
+   "rate": 7.86,
+   "count": 2303
+  },
+  {
+   "month": "2017-05",
+   "rate": 3.61,
+   "count": 3545
+  },
+  {
+   "month": "2017-06",
+   "rate": 3.86,
+   "count": 3135
+  },
+  {
+   "month": "2017-07",
+   "rate": 3.43,
+   "count": 3872
+  },
+  {
+   "month": "2017-08",
+   "rate": 3.32,
+   "count": 4193
+  },
+  {
+   "month": "2017-09",
+   "rate": 5.2,
+   "count": 4150
+  },
+  {
+   "month": "2017-10",
+   "rate": 5.29,
+   "count": 4478
+  },
+  {
+   "month": "2017-11",
+   "rate": 14.31,
+   "count": 7288
+  },
+  {
+   "month": "2017-12",
+   "rate": 8.38,
+   "count": 5513
+  },
+  {
+   "month": "2018-01",
+   "rate": 6.56,
+   "count": 7069
+  },
+  {
+   "month": "2018-02",
+   "rate": 15.99,
+   "count": 6555
+  },
+  {
+   "month": "2018-03",
+   "rate": 21.36,
+   "count": 7003
+  },
+  {
+   "month": "2018-04",
+   "rate": 5.31,
+   "count": 6798
+  },
+  {
+   "month": "2018-05",
+   "rate": 8.24,
+   "count": 6749
+  },
+  {
+   "month": "2018-06",
+   "rate": 1.36,
+   "count": 6096
+  },
+  {
+   "month": "2018-07",
+   "rate": 4.48,
+   "count": 6156
+  },
+  {
+   "month": "2018-08",
+   "rate": 10.39,
+   "count": 6351
+  }
+ ],
+ "state": [
+  {
+   "key": "AL",
+   "rate": 23.93,
+   "n": 397
+  },
+  {
+   "key": "MA",
+   "rate": 19.67,
+   "n": 717
+  },
+  {
+   "key": "PI",
+   "rate": 15.97,
+   "n": 476
+  },
+  {
+   "key": "CE",
+   "rate": 15.32,
+   "n": 1279
+  },
+  {
+   "key": "SE",
+   "rate": 15.22,
+   "n": 335
+  },
+  {
+   "key": "BA",
+   "rate": 14.04,
+   "n": 3256
+  },
+  {
+   "key": "RJ",
+   "rate": 13.47,
+   "n": 12350
+  },
+  {
+   "key": "TO",
+   "rate": 12.77,
+   "n": 274
+  },
+  {
+   "key": "PA",
+   "rate": 12.37,
+   "n": 946
+  },
+  {
+   "key": "ES",
+   "rate": 12.23,
+   "n": 1995
+  },
+  {
+   "key": "MS",
+   "rate": 11.55,
+   "n": 701
+  },
+  {
+   "key": "PB",
+   "rate": 11.03,
+   "n": 517
+  },
+  {
+   "key": "PE",
+   "rate": 10.8,
+   "n": 1593
+  },
+  {
+   "key": "RN",
+   "rate": 10.76,
+   "n": 474
+  },
+  {
+   "key": "SC",
+   "rate": 9.76,
+   "n": 3546
+  },
+  {
+   "key": "GO",
+   "rate": 8.18,
+   "n": 1957
+  },
+  {
+   "key": "RS",
+   "rate": 7.15,
+   "n": 5344
+  },
+  {
+   "key": "DF",
+   "rate": 7.07,
+   "n": 2080
+  },
+  {
+   "key": "MT",
+   "rate": 6.77,
+   "n": 886
+  },
+  {
+   "key": "SP",
+   "rate": 5.89,
+   "n": 40494
+  },
+  {
+   "key": "MG",
+   "rate": 5.61,
+   "n": 11354
+  },
+  {
+   "key": "PR",
+   "rate": 5.0,
+   "n": 4923
+  },
+  {
+   "key": "AM",
+   "rate": 4.14,
+   "n": 145
+  },
+  {
+   "key": "RO",
+   "rate": 2.88,
+   "n": 243
+  }
+ ],
+ "seller_state": [
+  {
+   "key": "MA",
+   "rate": 23.2,
+   "n": 388
+  },
+  {
+   "key": "SP",
+   "rate": 8.77,
+   "n": 68386
+  },
+  {
+   "key": "RJ",
+   "rate": 8.49,
+   "n": 4183
+  },
+  {
+   "key": "ES",
+   "rate": 7.1,
+   "n": 310
+  },
+  {
+   "key": "PR",
+   "rate": 6.52,
+   "n": 7444
+  },
+  {
+   "key": "DF",
+   "rate": 6.08,
+   "n": 806
+  },
+  {
+   "key": "SC",
+   "rate": 6.04,
+   "n": 3558
+  },
+  {
+   "key": "BA",
+   "rate": 5.85,
+   "n": 547
+  },
+  {
+   "key": "MG",
+   "rate": 5.63,
+   "n": 7661
+  },
+  {
+   "key": "PE",
+   "rate": 4.49,
+   "n": 401
+  },
+  {
+   "key": "MT",
+   "rate": 4.44,
+   "n": 135
+  },
+  {
+   "key": "RS",
+   "rate": 4.32,
+   "n": 1945
+  },
+  {
+   "key": "GO",
+   "rate": 4.02,
+   "n": 448
+  }
+ ],
+ "category": [
+  {
+   "key": "audio",
+   "rate": 12.93,
+   "n": 348
+  },
+  {
+   "key": "home_confort",
+   "rate": 10.98,
+   "n": 346
+  },
+  {
+   "key": "books_technical",
+   "rate": 10.94,
+   "n": 256
+  },
+  {
+   "key": "food",
+   "rate": 10.09,
+   "n": 436
+  },
+  {
+   "key": "electronics",
+   "rate": 9.84,
+   "n": 2509
+  },
+  {
+   "key": "construction_tools_lights",
+   "rate": 9.28,
+   "n": 237
+  },
+  {
+   "key": "office_furniture",
+   "rate": 9.24,
+   "n": 1244
+  },
+  {
+   "key": "baby",
+   "rate": 9.23,
+   "n": 2794
+  },
+  {
+   "key": "construction_tools_construction",
+   "rate": 9.17,
+   "n": 731
+  },
+  {
+   "key": "unknown",
+   "rate": 8.98,
+   "n": 1336
+  },
+  {
+   "key": "health_beauty",
+   "rate": 8.98,
+   "n": 8621
+  },
+  {
+   "key": "musical_instruments",
+   "rate": 8.91,
+   "n": 606
+  },
+  {
+   "key": "bed_bath_table",
+   "rate": 8.78,
+   "n": 9239
+  },
+  {
+   "key": "furniture_living_room",
+   "rate": 8.68,
+   "n": 403
+  },
+  {
+   "key": "auto",
+   "rate": 8.62,
+   "n": 3803
+  },
+  {
+   "key": "watches_gifts",
+   "rate": 8.58,
+   "n": 5453
+  },
+  {
+   "key": "furniture_decor",
+   "rate": 8.57,
+   "n": 6208
+  },
+  {
+   "key": "telephony",
+   "rate": 8.55,
+   "n": 4071
+  },
+  {
+   "key": "industry_commerce_and_business",
+   "rate": 8.33,
+   "n": 228
+  },
+  {
+   "key": "home_construction",
+   "rate": 8.26,
+   "n": 460
+  },
+  {
+   "key": "consoles_games",
+   "rate": 8.17,
+   "n": 1016
+  },
+  {
+   "key": "garden_tools",
+   "rate": 8.03,
+   "n": 3411
+  },
+  {
+   "key": "stationery",
+   "rate": 7.81,
+   "n": 2240
+  },
+  {
+   "key": "sports_leisure",
+   "rate": 7.78,
+   "n": 7477
+  },
+  {
+   "key": "art",
+   "rate": 7.73,
+   "n": 194
+  },
+  {
+   "key": "computers_accessories",
+   "rate": 7.72,
+   "n": 6519
+  },
+  {
+   "key": "toys",
+   "rate": 7.56,
+   "n": 3758
+  },
+  {
+   "key": "perfumery",
+   "rate": 7.43,
+   "n": 3069
+  },
+  {
+   "key": "home_appliances_2",
+   "rate": 7.08,
+   "n": 226
+  },
+  {
+   "key": "housewares",
+   "rate": 7.04,
+   "n": 5670
+  },
+  {
+   "key": "costruction_tools_garden",
+   "rate": 6.99,
+   "n": 186
+  },
+  {
+   "key": "cool_stuff",
+   "rate": 6.88,
+   "n": 3516
+  },
+  {
+   "key": "books_general_interest",
+   "rate": 6.88,
+   "n": 494
+  },
+  {
+   "key": "computers",
+   "rate": 6.82,
+   "n": 176
+  },
+  {
+   "key": "home_appliances",
+   "rate": 6.69,
+   "n": 747
+  },
+  {
+   "key": "drinks",
+   "rate": 6.67,
+   "n": 285
+  },
+  {
+   "key": "fashion_bags_accessories",
+   "rate": 6.66,
+   "n": 1816
+  },
+  {
+   "key": "fashion_shoes",
+   "rate": 6.44,
+   "n": 233
+  },
+  {
+   "key": "food_drink",
+   "rate": 6.36,
+   "n": 220
+  },
+  {
+   "key": "pet_shop",
+   "rate": 6.31,
+   "n": 1679
+  },
+  {
+   "key": "small_appliances",
+   "rate": 6.29,
+   "n": 604
+  },
+  {
+   "key": "luggage_accessories",
+   "rate": 5.44,
+   "n": 1011
+  },
+  {
+   "key": "fixed_telephony",
+   "rate": 5.19,
+   "n": 212
+  },
+  {
+   "key": "agro_industry_and_commerce",
+   "rate": 5.08,
+   "n": 177
+  },
+  {
+   "key": "market_place",
+   "rate": 4.92,
+   "n": 264
+  },
+  {
+   "key": "kitchen_dining_laundry_garden_furniture",
+   "rate": 4.66,
+   "n": 236
+  },
+  {
+   "key": "construction_tools_safety",
+   "rate": 4.52,
+   "n": 155
+  },
+  {
+   "key": "air_conditioning",
+   "rate": 4.07,
+   "n": 246
+  }
+ ],
+ "distance": [
+  {
+   "key": "< 100 km",
+   "rate": 6.39,
+   "n": 17897
+  },
+  {
+   "key": "100–300 km",
+   "rate": 6.45,
+   "n": 13351
+  },
+  {
+   "key": "300–700 km",
+   "rate": 8.04,
+   "n": 36679
+  },
+  {
+   "key": "700–1,500 km",
+   "rate": 8.73,
+   "n": 19778
+  },
+  {
+   "key": "1,500 km +",
+   "rate": 13.07,
+   "n": 8765
+  }
+ ],
+ "promise": [
+  {
+   "key": "< 10 days",
+   "rate": 17.31,
+   "n": 3945
+  },
+  {
+   "key": "10–20",
+   "rate": 7.46,
+   "n": 26719
+  },
+  {
+   "key": "20–30",
+   "rate": 8.82,
+   "n": 45934
+  },
+  {
+   "key": "30–45",
+   "rate": 5.9,
+   "n": 18004
+  },
+  {
+   "key": "45 days +",
+   "rate": 1.98,
+   "n": 1868
+  }
+ ],
+ "split": [
+  {
+   "key": "1 seller",
+   "rate": 8.2,
+   "n": 95195
+  },
+  {
+   "key": "2 sellers",
+   "rate": 1.48,
+   "n": 1216
+  },
+  {
+   "key": "3 +",
+   "rate": 0.0,
+   "n": 59
+  }
+ ],
+ "same_state": [
+  {
+   "key": "Same state",
+   "rate": 6.06,
+   "n": 34690
+  },
+  {
+   "key": "Different state",
+   "rate": 9.26,
+   "n": 61780
+  }
+ ],
+ "weekday": [
+  {
+   "key": "Mon",
+   "rate": 9.05,
+   "n": 15701
+  },
+  {
+   "key": "Tue",
+   "rate": 8.49,
+   "n": 15502
+  },
+  {
+   "key": "Wed",
+   "rate": 7.8,
+   "n": 15074
+  },
+  {
+   "key": "Thu",
+   "rate": 7.57,
+   "n": 14322
+  },
+  {
+   "key": "Fri",
+   "rate": 8.45,
+   "n": 13684
+  },
+  {
+   "key": "Sat",
+   "rate": 7.6,
+   "n": 10555
+  },
+  {
+   "key": "Sun",
+   "rate": 7.49,
+   "n": 11632
+  }
+ ],
+ "seller_watchlist": [
+  {
+   "seller_id": "ede0c03645598cdfc63ca8237acbe73d",
+   "rate": 34.9,
+   "n": 43,
+   "state": "SP",
+   "city": "Ribeirao Preto",
+   "category": "computers_accessories"
+  },
+  {
+   "seller_id": "ad781527c93d00d89a11eecd9dcad7c1",
+   "rate": 33.3,
+   "n": 36,
+   "state": "SP",
+   "city": "Sao Jose Do Rio Preto",
+   "category": "baby"
+  },
+  {
+   "seller_id": "835f0f7810c76831d6c7d24c7a646d4d",
+   "rate": 31.7,
+   "n": 41,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "housewares"
+  },
+  {
+   "seller_id": "54965bbe3e4f07ae045b90b0b8541f52",
+   "rate": 30.1,
+   "n": 73,
+   "state": "PR",
+   "city": "Foz Do Iguacu",
+   "category": "bed_bath_table"
+  },
+  {
+   "seller_id": "2a1348e9addc1af5aaa619b1a3679d6b",
+   "rate": 28.9,
+   "n": 45,
+   "state": "MG",
+   "city": "Belo Horizonte",
+   "category": "furniture_decor"
+  },
+  {
+   "seller_id": "ef990a83bbea832f36ebe81376335aa8",
+   "rate": 27.5,
+   "n": 40,
+   "state": "SC",
+   "city": "Joinville",
+   "category": "sports_leisure"
+  },
+  {
+   "seller_id": "66e0557ecc2b4dbea057e93f215f68d8",
+   "rate": 26.7,
+   "n": 30,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "consoles_games"
+  },
+  {
+   "seller_id": "a49928bcdf77c55c6d6e05e09a9b4ca5",
+   "rate": 26.0,
+   "n": 96,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "toys"
+  },
+  {
+   "seller_id": "beadbee30901a7f61d031b6b686095ad",
+   "rate": 25.4,
+   "n": 63,
+   "state": "SP",
+   "city": "Guarulhos",
+   "category": "health_beauty"
+  },
+  {
+   "seller_id": "cac4c8e7b1ca6252d8f20b2fc1a2e4af",
+   "rate": 23.9,
+   "n": 71,
+   "state": "SP",
+   "city": "Indaiatuba",
+   "category": "furniture_decor"
+  },
+  {
+   "seller_id": "71039d19d4303bf9054d69e9a9236699",
+   "rate": 23.5,
+   "n": 34,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "toys"
+  },
+  {
+   "seller_id": "06a2c3af7b3aee5d69171b0e14f0ee87",
+   "rate": 23.2,
+   "n": 388,
+   "state": "MA",
+   "city": "Sao Luis",
+   "category": "health_beauty"
+  },
+  {
+   "seller_id": "1ca7077d890b907f89be8c954a02686a",
+   "rate": 22.2,
+   "n": 108,
+   "state": "SP",
+   "city": "Santana De Parnaiba",
+   "category": "unknown"
+  },
+  {
+   "seller_id": "6039e27294dc75811c0d8a39069f52c0",
+   "rate": 22.2,
+   "n": 63,
+   "state": "SP",
+   "city": "Osasco",
+   "category": "electronics"
+  },
+  {
+   "seller_id": "712e6ed8aa4aa1fa65dab41fed5737e4",
+   "rate": 22.1,
+   "n": 77,
+   "state": "SC",
+   "city": "Videira",
+   "category": "auto"
+  },
+  {
+   "seller_id": "ea566164622c6b439516ab18062c42cd",
+   "rate": 22.0,
+   "n": 50,
+   "state": "SP",
+   "city": "Sao  Paulo",
+   "category": "health_beauty"
+  },
+  {
+   "seller_id": "99a54764c341d5dc80b4a8fac4eba3fb",
+   "rate": 21.4,
+   "n": 42,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "housewares"
+  },
+  {
+   "seller_id": "d13e50eaa47b4cbe9eb81465865d8cfc",
+   "rate": 21.2,
+   "n": 66,
+   "state": "SP",
+   "city": "Santo Andre",
+   "category": "food"
+  },
+  {
+   "seller_id": "c60b801f2d52c7f7f91de00870882a75",
+   "rate": 21.1,
+   "n": 38,
+   "state": "SP",
+   "city": "Guarulhos",
+   "category": "watches_gifts"
+  },
+  {
+   "seller_id": "88460e8ebdecbfecb5f9601833981930",
+   "rate": 20.7,
+   "n": 232,
+   "state": "PR",
+   "city": "Maringa",
+   "category": "computers_accessories"
+  },
+  {
+   "seller_id": "3fd1e727ba94cfe122d165e176ce7967",
+   "rate": 20.6,
+   "n": 34,
+   "state": "SP",
+   "city": "Araraquara",
+   "category": "sports_leisure"
+  },
+  {
+   "seller_id": "0bf0150d5b9d60d9cd2906003332f085",
+   "rate": 20.5,
+   "n": 39,
+   "state": "SP",
+   "city": "Sao Paulo",
+   "category": "furniture_decor"
+  },
+  {
+   "seller_id": "2a261b5b644fa05f4f2700eb93544f2c",
+   "rate": 20.4,
+   "n": 49,
+   "state": "SP",
+   "city": "Porto Ferreira",
+   "category": "furniture_decor"
+  },
+  {
+   "seller_id": "d20b021d3efdf267a402c402a48ea64b",
+   "rate": 20.3,
+   "n": 74,
+   "state": "SP",
+   "city": "Ibitinga",
+   "category": "furniture_decor"
+  },
+  {
+   "seller_id": "6ec1a01e866584bb679eb9b098345919",
+   "rate": 20.0,
+   "n": 30,
+   "state": "SP",
+   "city": "Santos",
+   "category": "health_beauty"
+  }
+ ],
+ "n_sellers_30plus": 622
+}

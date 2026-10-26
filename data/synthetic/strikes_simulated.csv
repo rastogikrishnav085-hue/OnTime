@@ -1,0 +1,110 @@
+strike_id,state,start_date,end_date,kind,simulated
+S0001,AC,2017-10-01,2017-10-04,port/airport strike,1
+S0002,AL,2017-04-03,2017-04-06,truckers strike,1
+S0003,AL,2017-08-22,2017-08-27,carrier staff strike,1
+S0004,AL,2017-09-28,2017-10-01,carrier staff strike,1
+S0005,AL,2017-10-24,2017-10-29,truckers strike,1
+S0006,AL,2017-12-31,2018-01-05,truckers strike,1
+S0007,AL,2018-03-19,2018-03-24,carrier staff strike,1
+S0008,AL,2018-04-15,2018-04-19,port/airport strike,1
+S0009,AL,2018-05-23,2018-05-27,port/airport strike,1
+S0010,AM,2017-12-23,2017-12-25,truckers strike,1
+S0011,AP,2018-08-12,2018-08-14,truckers strike,1
+S0012,BA,2017-01-23,2017-01-25,carrier staff strike,1
+S0013,BA,2017-04-24,2017-04-26,port/airport strike,1
+S0014,BA,2017-09-18,2017-09-21,port/airport strike,1
+S0015,BA,2018-01-03,2018-01-05,port/airport strike,1
+S0016,BA,2018-01-30,2018-02-01,carrier staff strike,1
+S0017,BA,2018-03-26,2018-03-28,truckers strike,1
+S0018,BA,2018-05-16,2018-05-19,port/airport strike,1
+S0019,BA,2018-08-13,2018-08-15,truckers strike,1
+S0020,CE,2017-04-27,2017-04-30,truckers strike,1
+S0021,CE,2018-01-05,2018-01-08,port/airport strike,1
+S0022,CE,2018-02-27,2018-03-04,port/airport strike,1
+S0023,CE,2018-03-21,2018-03-23,carrier staff strike,1
+S0024,CE,2018-04-11,2018-04-13,truckers strike,1
+S0025,CE,2018-05-23,2018-05-25,truckers strike,1
+S0026,CE,2018-06-10,2018-06-14,carrier staff strike,1
+S0027,CE,2018-06-26,2018-07-01,truckers strike,1
+S0028,DF,2016-10-27,2016-10-29,port/airport strike,1
+S0029,DF,2017-07-03,2017-07-06,carrier staff strike,1
+S0030,DF,2017-10-05,2017-10-07,port/airport strike,1
+S0031,DF,2017-11-15,2017-11-19,port/airport strike,1
+S0032,DF,2018-03-11,2018-03-13,truckers strike,1
+S0033,DF,2018-03-24,2018-03-29,carrier staff strike,1
+S0034,DF,2018-04-15,2018-04-19,carrier staff strike,1
+S0035,DF,2018-08-05,2018-08-07,port/airport strike,1
+S0036,ES,2017-12-23,2017-12-25,carrier staff strike,1
+S0037,ES,2018-03-16,2018-03-18,carrier staff strike,1
+S0038,ES,2018-05-31,2018-06-05,truckers strike,1
+S0039,ES,2018-10-16,2018-10-20,truckers strike,1
+S0040,GO,2017-03-07,2017-03-10,port/airport strike,1
+S0041,GO,2017-08-14,2017-08-16,carrier staff strike,1
+S0042,MA,2016-12-18,2016-12-23,truckers strike,1
+S0043,MA,2017-05-04,2017-05-09,port/airport strike,1
+S0044,MA,2017-12-01,2017-12-04,carrier staff strike,1
+S0045,MA,2018-01-04,2018-01-08,truckers strike,1
+S0046,MA,2018-03-31,2018-04-05,carrier staff strike,1
+S0047,MA,2018-04-27,2018-04-30,carrier staff strike,1
+S0048,MA,2018-07-24,2018-07-26,truckers strike,1
+S0049,MA,2018-08-11,2018-08-14,carrier staff strike,1
+S0050,MG,2017-11-22,2017-11-27,truckers strike,1
+S0051,MG,2018-03-29,2018-04-03,truckers strike,1
+S0052,MG,2018-06-10,2018-06-13,truckers strike,1
+S0053,MG,2018-08-01,2018-08-05,port/airport strike,1
+S0054,MG,2018-09-14,2018-09-17,truckers strike,1
+S0055,MS,2017-10-15,2017-10-20,port/airport strike,1
+S0056,MS,2018-08-28,2018-09-01,carrier staff strike,1
+S0057,MT,2018-02-28,2018-03-03,carrier staff strike,1
+S0058,MT,2018-04-12,2018-04-17,truckers strike,1
+S0059,PA,2017-05-20,2017-05-23,port/airport strike,1
+S0060,PA,2018-07-29,2018-08-03,carrier staff strike,1
+S0061,PB,2017-07-08,2017-07-12,port/airport strike,1
+S0062,PB,2017-07-10,2017-07-14,port/airport strike,1
+S0063,PB,2018-01-07,2018-01-12,carrier staff strike,1
+S0064,PB,2018-01-24,2018-01-28,truckers strike,1
+S0065,PB,2018-05-03,2018-05-05,truckers strike,1
+S0066,PB,2018-09-02,2018-09-05,truckers strike,1
+S0067,PE,2017-05-03,2017-05-05,port/airport strike,1
+S0068,PE,2017-11-19,2017-11-23,carrier staff strike,1
+S0069,PE,2017-12-13,2017-12-17,truckers strike,1
+S0070,PE,2018-03-09,2018-03-12,truckers strike,1
+S0071,PE,2018-05-05,2018-05-09,port/airport strike,1
+S0072,PE,2018-05-07,2018-05-10,port/airport strike,1
+S0073,PE,2018-05-21,2018-05-26,port/airport strike,1
+S0074,PI,2017-11-02,2017-11-05,carrier staff strike,1
+S0075,PI,2018-03-08,2018-03-13,truckers strike,1
+S0076,PI,2018-07-17,2018-07-21,truckers strike,1
+S0077,PR,2017-01-21,2017-01-24,truckers strike,1
+S0078,PR,2017-03-26,2017-03-31,carrier staff strike,1
+S0079,PR,2018-01-24,2018-01-27,carrier staff strike,1
+S0080,RJ,2017-05-07,2017-05-10,port/airport strike,1
+S0081,RJ,2017-12-07,2017-12-09,truckers strike,1
+S0082,RJ,2018-01-30,2018-02-04,truckers strike,1
+S0083,RJ,2018-03-08,2018-03-11,port/airport strike,1
+S0084,RN,2017-04-30,2017-05-04,port/airport strike,1
+S0085,RN,2017-09-05,2017-09-08,carrier staff strike,1
+S0086,RN,2018-03-12,2018-03-14,truckers strike,1
+S0087,RN,2018-05-05,2018-05-08,carrier staff strike,1
+S0088,RN,2018-05-21,2018-05-25,port/airport strike,1
+S0089,RO,2017-05-06,2017-05-10,truckers strike,1
+S0090,RO,2018-02-10,2018-02-14,port/airport strike,1
+S0091,RS,2017-04-25,2017-04-30,port/airport strike,1
+S0092,RS,2017-12-17,2017-12-21,truckers strike,1
+S0093,RS,2018-03-25,2018-03-27,truckers strike,1
+S0094,RS,2018-04-11,2018-04-13,truckers strike,1
+S0095,SC,2017-05-17,2017-05-19,carrier staff strike,1
+S0096,SC,2017-09-06,2017-09-08,truckers strike,1
+S0097,SC,2018-04-02,2018-04-06,truckers strike,1
+S0098,SC,2018-05-16,2018-05-18,port/airport strike,1
+S0099,SC,2018-06-07,2018-06-10,truckers strike,1
+S0100,SE,2017-01-20,2017-01-24,carrier staff strike,1
+S0101,SE,2017-06-05,2017-06-09,carrier staff strike,1
+S0102,SE,2017-07-07,2017-07-12,carrier staff strike,1
+S0103,SE,2018-08-06,2018-08-11,truckers strike,1
+S0104,SP,2017-03-14,2017-03-17,truckers strike,1
+S0105,SP,2018-03-30,2018-04-03,truckers strike,1
+S0106,SP,2018-04-03,2018-04-07,port/airport strike,1
+S0107,TO,2017-06-15,2017-06-17,port/airport strike,1
+S0108,TO,2018-07-13,2018-07-17,port/airport strike,1
+S0109,TO,2018-08-15,2018-08-17,truckers strike,1

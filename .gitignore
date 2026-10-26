@@ -1,0 +1,38 @@
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.venv/
+__pycache__/
+backend/ontime.db
+backend/settings.json
+dashboard/_publish_fragment.html
+data/processed/ontime_joined_raw.csv
+data/raw/*.csv
+models/local_rebuild/
+scored_orders.csv
+template_orders.csv
+backend/adapted/
+data/processed/.ckpt_*.json
+
+# The generated dispatch benchmark is small enough for GitHub and two tests need it
+!data/raw/synthetic_operational_orders.csv
+
+# Public repository safety
+submission_documents/
+.env.*
+!.env.example
+
+# Additional Python artifacts
+venv/
+*.py[cod]
+
+# Local databases and private configuration
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

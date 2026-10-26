@@ -1,0 +1,11 @@
+trial,kind,cv_roc_auc,cv_roc_auc_sd,cv_pr_auc,seconds,params
+1,search,0.79803,0.0035800000000000003,0.32004000000000005,7.5,"{'l2_regularization': 0.019948999999999998, 'learning_rate': 0.057581, 'max_depth': None, 'max_iter': 249, 'max_leaf_nodes': 54, 'min_samples_leaf': 43}"
+8,search,0.79742,0.004070000000000001,0.31117,9.2,"{'l2_regularization': 5.345166, 'learning_rate': 0.036292, 'max_depth': 10, 'max_iter': 151, 'max_leaf_nodes': 20, 'min_samples_leaf': 73}"
+7,search,0.7968900000000001,0.0022400000000000002,0.31828,10.3,"{'l2_regularization': 0.011165999999999999, 'learning_rate': 0.034034999999999996, 'max_depth': 10, 'max_iter': 413, 'max_leaf_nodes': 61, 'min_samples_leaf': 54}"
+2,search,0.7966000000000001,0.00353,0.31023,15.6,"{'l2_regularization': 0.8967379999999999, 'learning_rate': 0.022774, 'max_depth': 10, 'max_iter': 443, 'max_leaf_nodes': 16, 'min_samples_leaf': 83}"
+9,search,0.7964500000000001,0.0034100000000000003,0.31614000000000003,10.8,"{'l2_regularization': 0.436647, 'learning_rate': 0.030611, 'max_depth': 8, 'max_iter': 367, 'max_leaf_nodes': 58, 'min_samples_leaf': 53}"
+6,search,0.79605,0.004,0.31302,6.4,"{'l2_regularization': 1.09881, 'learning_rate': 0.056431999999999996, 'max_depth': 6, 'max_iter': 238, 'max_leaf_nodes': 28, 'min_samples_leaf': 28}"
+3,search,0.79593,0.00485,0.31587000000000004,5.6,"{'l2_regularization': 9.47621, 'learning_rate': 0.082892, 'max_depth': 6, 'max_iter': 171, 'max_leaf_nodes': 58, 'min_samples_leaf': 108}"
+4,search,0.7950400000000001,0.0043,0.31266000000000005,5.0,"{'l2_regularization': 0.074763, 'learning_rate': 0.081824, 'max_depth': 6, 'max_iter': 337, 'max_leaf_nodes': 30, 'min_samples_leaf': 34}"
+5,search,0.7949900000000001,0.00444,0.31107,4.5,"{'l2_regularization': 0.233459, 'learning_rate': 0.121957, 'max_depth': 8, 'max_iter': 204, 'max_leaf_nodes': 17, 'min_samples_leaf': 70}"
+0,search,0.7931400000000001,0.004,0.31204000000000004,3.4,"{'l2_regularization': 0.132929, 'learning_rate': 0.17854399999999998, 'max_depth': 8, 'max_iter': 221, 'max_leaf_nodes': 35, 'min_samples_leaf': 102}"

@@ -1,0 +1,25 @@
+OnTime v5 operational validation and end-to-end verification
+Date: 2026-10-24
+
+Checks
+- Python compile check for backend/app, src, scripts and tests: PASS
+- Optional LightGBM import regression: PASS; simulated the reported TypeError during LightGBM import and verified the OnTime engine still loads its queue and operational model.
+- Frontend JavaScript syntax check (node --check): PASS
+- Full test suite: 211 passed, 2 warnings
+- Live scoring metadata shared by /api/health, /api/meta, /api/model and /api/models: PASS
+- Single-order and batch scoring use the configured model unless explicitly overridden: PASS
+- Model page displays live-scoring configuration and matching benchmark only; historical checkout evaluation metrics are not mixed into the active model payload: PASS
+- Assistant model-quality response follows current live scoring setting: PASS
+- Synthetic benchmark provenance and limitations remain explicit: PASS
+- Operational outcome validation CLI: PASS unit tests; requires timestamped predictions and a separate observed-outcomes CSV
+- Deployment HTTP smoke test: PASS; 11 checks against a running local server, including single and batch inference
+- /api/health/diagnostics distinguishes local readiness from weather connectivity and real-world validation status: PASS
+- All nine original Olist CSV hashes match the packaged manifest: PASS
+
+External/deployment checks
+- Live weather request from this build environment failed with URLError; provider connectivity must be tested from the target deployment network. Mocked route tests pass and no synthetic weather is substituted on provider failure.
+- Docker is unavailable in this build environment; CI now runs the HTTP smoke test inside the built container.
+- No genuine observed operational outcomes file was supplied. Real-world accuracy is not yet established.
+
+Warnings
+- Two compatibility warnings relate to loading a legacy XGBoost pickle created under a different XGBoost version. The dispatch model's intended inference artifact is portable XGBoost JSON. The reported LightGBM/Dask TypeError is now treated as an optional training-dependency failure and no longer blocks app startup.

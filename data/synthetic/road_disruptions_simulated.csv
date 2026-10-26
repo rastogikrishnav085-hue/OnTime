@@ -1,0 +1,145 @@
+state,start_date,end_date,kind,simulated
+AC,2017-10-22,2017-10-26,flooded road,1
+AC,2017-12-29,2017-12-30,truck accident,1
+AC,2018-03-08,2018-03-09,bridge closed,1
+AL,2017-05-21,2017-05-23,landslide,1
+AL,2017-05-27,2017-05-31,truck accident,1
+AL,2017-12-20,2017-12-23,landslide,1
+AL,2018-02-27,2018-03-02,bridge closed,1
+AL,2018-03-15,2018-03-16,bridge closed,1
+AL,2018-04-29,2018-05-03,landslide,1
+AL,2018-05-29,2018-06-01,flooded road,1
+AL,2018-08-09,2018-08-10,landslide,1
+AM,2017-05-13,2017-05-17,bridge closed,1
+AM,2018-05-01,2018-05-04,flooded road,1
+AM,2018-05-29,2018-06-01,bridge closed,1
+AP,2017-05-22,2017-05-26,bridge closed,1
+BA,2016-11-05,2016-11-07,landslide,1
+BA,2017-05-09,2017-05-13,landslide,1
+BA,2017-05-18,2017-05-21,truck accident,1
+BA,2017-10-15,2017-10-19,truck accident,1
+BA,2018-04-16,2018-04-19,bridge closed,1
+BA,2018-05-25,2018-05-27,bridge closed,1
+BA,2018-06-15,2018-06-18,bridge closed,1
+BA,2018-09-12,2018-09-16,bridge closed,1
+CE,2017-04-28,2017-05-01,flooded road,1
+CE,2018-04-07,2018-04-08,landslide,1
+CE,2018-04-13,2018-04-15,landslide,1
+CE,2018-04-19,2018-04-23,truck accident,1
+DF,2017-01-30,2017-02-01,bridge closed,1
+DF,2018-01-21,2018-01-25,truck accident,1
+DF,2018-06-21,2018-06-22,landslide,1
+DF,2018-09-30,2018-10-04,truck accident,1
+ES,2017-07-25,2017-07-27,truck accident,1
+ES,2018-03-04,2018-03-06,landslide,1
+ES,2018-04-20,2018-04-22,landslide,1
+GO,2017-07-04,2017-07-06,flooded road,1
+GO,2018-02-20,2018-02-22,truck accident,1
+GO,2018-04-12,2018-04-14,landslide,1
+GO,2018-05-20,2018-05-23,flooded road,1
+GO,2018-05-31,2018-06-03,landslide,1
+GO,2018-08-07,2018-08-09,flooded road,1
+MA,2017-03-12,2017-03-16,bridge closed,1
+MA,2017-08-03,2017-08-07,truck accident,1
+MA,2017-10-18,2017-10-19,landslide,1
+MA,2017-12-02,2017-12-05,truck accident,1
+MA,2018-03-04,2018-03-07,bridge closed,1
+MA,2018-03-14,2018-03-16,truck accident,1
+MA,2018-04-08,2018-04-09,landslide,1
+MA,2018-04-12,2018-04-16,truck accident,1
+MA,2018-08-06,2018-08-10,bridge closed,1
+MA,2018-08-17,2018-08-18,bridge closed,1
+MA,2018-08-30,2018-09-02,landslide,1
+MG,2017-06-07,2017-06-11,bridge closed,1
+MG,2017-10-07,2017-10-09,flooded road,1
+MG,2018-03-26,2018-03-28,flooded road,1
+MG,2018-04-23,2018-04-27,flooded road,1
+MG,2018-05-17,2018-05-20,flooded road,1
+MG,2018-06-05,2018-06-09,bridge closed,1
+MG,2018-09-07,2018-09-08,flooded road,1
+MS,2017-03-31,2017-04-02,truck accident,1
+MS,2018-01-06,2018-01-07,bridge closed,1
+MS,2018-07-12,2018-07-16,flooded road,1
+MS,2018-08-25,2018-08-29,flooded road,1
+MT,2017-04-04,2017-04-07,flooded road,1
+MT,2017-12-18,2017-12-19,flooded road,1
+MT,2017-12-28,2017-12-30,bridge closed,1
+MT,2018-01-16,2018-01-17,landslide,1
+MT,2018-02-02,2018-02-03,bridge closed,1
+PA,2017-04-24,2017-04-26,truck accident,1
+PA,2017-09-14,2017-09-16,flooded road,1
+PA,2017-09-22,2017-09-24,landslide,1
+PA,2018-05-03,2018-05-04,truck accident,1
+PA,2018-08-25,2018-08-28,landslide,1
+PB,2017-08-01,2017-08-02,landslide,1
+PB,2017-08-15,2017-08-18,bridge closed,1
+PB,2017-10-15,2017-10-18,bridge closed,1
+PB,2017-10-21,2017-10-25,flooded road,1
+PB,2017-12-09,2017-12-13,truck accident,1
+PB,2018-01-23,2018-01-27,truck accident,1
+PB,2018-06-11,2018-06-15,flooded road,1
+PB,2018-07-30,2018-07-31,flooded road,1
+PE,2016-11-01,2016-11-03,landslide,1
+PE,2017-05-05,2017-05-06,bridge closed,1
+PE,2017-07-10,2017-07-12,bridge closed,1
+PE,2017-09-17,2017-09-21,landslide,1
+PE,2017-09-19,2017-09-20,landslide,1
+PE,2018-03-10,2018-03-14,truck accident,1
+PE,2018-03-23,2018-03-25,flooded road,1
+PI,2017-09-26,2017-09-27,flooded road,1
+PI,2017-11-28,2017-11-29,landslide,1
+PI,2018-01-09,2018-01-10,flooded road,1
+PI,2018-03-14,2018-03-16,landslide,1
+PI,2018-04-01,2018-04-03,landslide,1
+PI,2018-04-20,2018-04-23,bridge closed,1
+PI,2018-05-02,2018-05-05,bridge closed,1
+PI,2018-07-24,2018-07-25,landslide,1
+PR,2017-02-04,2017-02-07,truck accident,1
+PR,2017-05-02,2017-05-05,flooded road,1
+PR,2017-11-25,2017-11-29,landslide,1
+PR,2018-03-14,2018-03-16,flooded road,1
+PR,2018-03-20,2018-03-24,landslide,1
+PR,2018-03-30,2018-04-02,bridge closed,1
+PR,2018-09-03,2018-09-06,flooded road,1
+RJ,2017-12-31,2018-01-04,truck accident,1
+RJ,2018-01-18,2018-01-19,flooded road,1
+RJ,2018-02-22,2018-02-25,landslide,1
+RJ,2018-03-15,2018-03-17,bridge closed,1
+RJ,2018-04-18,2018-04-20,bridge closed,1
+RJ,2018-05-11,2018-05-15,bridge closed,1
+RN,2017-06-10,2017-06-11,landslide,1
+RN,2017-11-30,2017-12-04,landslide,1
+RN,2018-01-18,2018-01-22,bridge closed,1
+RN,2018-04-27,2018-04-30,truck accident,1
+RN,2018-06-01,2018-06-04,bridge closed,1
+RO,2017-03-17,2017-03-20,bridge closed,1
+RO,2017-11-11,2017-11-13,landslide,1
+RO,2018-06-29,2018-06-30,truck accident,1
+RO,2018-07-30,2018-07-31,truck accident,1
+RR,2017-10-30,2017-11-03,landslide,1
+RS,2016-11-17,2016-11-21,landslide,1
+RS,2017-10-25,2017-10-26,bridge closed,1
+RS,2017-12-19,2017-12-20,landslide,1
+RS,2018-03-23,2018-03-27,truck accident,1
+SC,2017-05-20,2017-05-22,truck accident,1
+SC,2017-08-22,2017-08-23,bridge closed,1
+SC,2017-12-25,2017-12-29,landslide,1
+SC,2018-02-08,2018-02-10,truck accident,1
+SC,2018-04-14,2018-04-18,landslide,1
+SC,2018-07-23,2018-07-27,landslide,1
+SE,2017-06-29,2017-06-30,flooded road,1
+SE,2017-11-11,2017-11-12,flooded road,1
+SE,2017-12-25,2017-12-28,truck accident,1
+SE,2018-01-03,2018-01-06,flooded road,1
+SE,2018-01-18,2018-01-22,truck accident,1
+SE,2018-04-17,2018-04-20,truck accident,1
+SE,2018-06-04,2018-06-07,bridge closed,1
+SP,2017-12-01,2017-12-04,bridge closed,1
+SP,2018-02-17,2018-02-21,landslide,1
+SP,2018-06-18,2018-06-21,landslide,1
+SP,2018-09-06,2018-09-08,bridge closed,1
+SP,2018-09-14,2018-09-17,flooded road,1
+TO,2018-01-08,2018-01-09,truck accident,1
+TO,2018-03-16,2018-03-20,flooded road,1
+TO,2018-03-20,2018-03-23,flooded road,1
+TO,2018-04-22,2018-04-24,bridge closed,1

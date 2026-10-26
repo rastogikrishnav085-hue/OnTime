@@ -1,0 +1,270 @@
+{
+  "generated_utc": "2026-10-24T07:24:42.398127+00:00",
+  "data_source": "Real Olist delivered-order data; no simulated weather/tracking data in model inputs",
+  "target": "is_delayed; actual delivered date later than estimated delivery date",
+  "prediction_cutoff": "Order purchase time; features must be known at checkout",
+  "split": {
+    "train": {
+      "n": 62705,
+      "start": "2016-09-15 12:16:38",
+      "end": "2018-03-23 19:48:26",
+      "late_rate": 0.09033
+    },
+    "validation": {
+      "n": 14471,
+      "start": "2018-03-23 19:57:14",
+      "end": "2018-05-26 18:16:57",
+      "late_rate": 0.07885
+    },
+    "test": {
+      "n": 19294,
+      "start": "2018-05-26 18:18:03",
+      "end": "2018-08-29 15:00:37",
+      "late_rate": 0.05292
+    }
+  },
+  "feature_count": 70,
+  "candidates": {
+    "lightgbm_enriched": {
+      "validation": {
+        "roc_auc": 0.7634,
+        "pr_auc": 0.22198,
+        "brier": 0.06856,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.23518,
+        "recall": 0.32691,
+        "f1": 0.27356,
+        "confusion": {
+          "tn": 12117,
+          "fp": 1213,
+          "fn": 768,
+          "tp": 373
+        },
+        "recall_top10pct": 0.31025
+      },
+      "test": {
+        "roc_auc": 0.66489,
+        "pr_auc": 0.08107,
+        "brier": 0.05958,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.07685,
+        "recall": 0.22429,
+        "f1": 0.11447,
+        "confusion": {
+          "tn": 15522,
+          "fp": 2751,
+          "fn": 792,
+          "tp": 229
+        },
+        "recall_top10pct": 0.15377
+      },
+      "fit_seconds": 5.8,
+      "selected_on_validation": false
+    },
+    "hist_gradient_enriched": {
+      "validation": {
+        "roc_auc": 0.74899,
+        "pr_auc": 0.20849,
+        "brier": 0.06994,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.22737,
+        "recall": 0.36547,
+        "f1": 0.28034,
+        "confusion": {
+          "tn": 11913,
+          "fp": 1417,
+          "fn": 724,
+          "tp": 417
+        },
+        "recall_top10pct": 0.31113
+      },
+      "test": {
+        "roc_auc": 0.69673,
+        "pr_auc": 0.09414,
+        "brier": 0.06452,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.0904,
+        "recall": 0.31538,
+        "f1": 0.14052,
+        "confusion": {
+          "tn": 15033,
+          "fp": 3240,
+          "fn": 699,
+          "tp": 322
+        },
+        "recall_top10pct": 0.17042
+      },
+      "fit_seconds": 8.5,
+      "selected_on_validation": false
+    },
+    "xgboost_enriched": {
+      "validation": {
+        "roc_auc": 0.77248,
+        "pr_auc": 0.23343,
+        "brier": 0.06878,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.24988,
+        "recall": 0.45486,
+        "f1": 0.32256,
+        "confusion": {
+          "tn": 11772,
+          "fp": 1558,
+          "fn": 622,
+          "tp": 519
+        },
+        "recall_top10pct": 0.33216
+      },
+      "test": {
+        "roc_auc": 0.71679,
+        "pr_auc": 0.10244,
+        "brier": 0.064,
+        "threshold_from_validation": 0.21432,
+        "precision": 0.09974,
+        "recall": 0.45348,
+        "f1": 0.16352,
+        "confusion": {
+          "tn": 14094,
+          "fp": 4179,
+          "fn": 558,
+          "tp": 463
+        },
+        "recall_top10pct": 0.18707
+      },
+      "fit_seconds": 8.5,
+      "selected_on_validation": true
+    }
+  },
+  "validation_auc_by_model": {
+    "lightgbm_enriched": 0.7634,
+    "hist_gradient_enriched": 0.74899,
+    "xgboost_enriched": 0.77248
+  },
+  "selected": "xgboost_enriched",
+  "threshold": 0.73313,
+  "target_auc_0_90_reached": false,
+  "limitations": [
+    "Olist does not include observed historical weather, road disruptions, carrier scans, or hub congestion. Synthetic tracking files are not used as real data or model inputs.",
+    "Chronological test is the primary estimate; temporal distribution shift is expected.",
+    "Model selection uses validation only; the newest 20% test is held out."
+  ],
+  "runtime_note": "Single-environment training; see fit_seconds per candidate.",
+  "production_artifact": {
+    "directory": "models/enriched",
+    "member": "xgb",
+    "feature_count": 70,
+    "threshold": 0.7331309562790232,
+    "test_metrics": {
+      "roc_auc": 0.71679,
+      "pr_auc": 0.10244,
+      "brier": 0.33719,
+      "threshold_from_validation": 0.73313,
+      "precision": 0.09974,
+      "recall": 0.45348,
+      "f1": 0.16352,
+      "confusion": {
+        "tn": 14094,
+        "fp": 4179,
+        "fn": 558,
+        "tp": 463
+      },
+      "recall_top10pct": 0.18707,
+      "calibrated_brier": 0.05629,
+      "calibration_ece": 0.05017,
+      "calibration_method": "isotonic fit on chronological validation block only"
+    },
+    "sha256": {
+      "xgb_preprocessor.joblib": "6898aa703ae9a3dcc63970bf00971dfe0eaf27847c64b87b3a23f06133efb161",
+      "xgb_booster.json": "10f468d002146da59520cf206966b84e14c0d4fb043599d0647df70a8388be8b"
+    }
+  },
+  "rolling_backtest": {
+    "months": [
+      {
+        "month": "2018-06",
+        "n_train": 77867,
+        "n_test": 6096,
+        "late_rate": 0.01362,
+        "roc_auc": 0.76538,
+        "pr_auc": 0.08581,
+        "seconds": 5.7
+      },
+      {
+        "month": "2018-07",
+        "n_train": 83963,
+        "n_test": 6156,
+        "late_rate": 0.04483,
+        "roc_auc": 0.71784,
+        "pr_auc": 0.10307,
+        "seconds": 6.1
+      },
+      {
+        "month": "2018-08",
+        "n_train": 90119,
+        "n_test": 6351,
+        "late_rate": 0.10392,
+        "roc_auc": 0.78053,
+        "pr_auc": 0.28531,
+        "seconds": 7.9
+      }
+    ],
+    "mean_auc": 0.75458,
+    "core_xgboost_months": [
+      {
+        "month": "2018-06",
+        "n_train": 77867,
+        "n_test": 6096,
+        "late_rate": 0.01362,
+        "roc_auc": 0.77132,
+        "pr_auc": 0.09681
+      },
+      {
+        "month": "2018-07",
+        "n_train": 83963,
+        "n_test": 6156,
+        "late_rate": 0.04483,
+        "roc_auc": 0.64419,
+        "pr_auc": 0.08551
+      },
+      {
+        "month": "2018-08",
+        "n_train": 90119,
+        "n_test": 6351,
+        "late_rate": 0.10392,
+        "roc_auc": 0.70535,
+        "pr_auc": 0.22489
+      }
+    ],
+    "core_mean_auc": 0.70695,
+    "enriched_wins": 2,
+    "n_months": 3,
+    "note": "Backtest months are after the validation period (June-August 2018). Each month is scored using only orders purchased before that month."
+  },
+  "paired_test_comparison": {
+    "test_n": 19294,
+    "late_rate": 0.05291800559759511,
+    "enriched_auc": 0.7167854361211046,
+    "core_ensemble_auc": 0.590705993380513,
+    "enriched_pr_auc": 0.10243962261404872,
+    "core_ensemble_pr_auc": 0.0661835157388851,
+    "paired_auc_difference": 0.12568529390036054,
+    "paired_auc_difference_ci95": [
+      0.11076969682015637,
+      0.14175178239226344
+    ],
+    "bootstrap_resamples": 500
+  },
+  "calibration_assessment": {
+    "method": "sigmoid/Platt validation-only",
+    "test_ece": 0.05017,
+    "test_brier": 0.05629,
+    "base_rate_brier": 0.05012,
+    "note": "Calibration drift remains. Do not interpret raw risk score as a literal probability; calibrated chance is validation-fitted and should be recalibrated on recent labelled operational data before production decisions."
+  },
+  "target_090": {
+    "goal": 0.9,
+    "reached_on_test_block": false,
+    "best_test_roc_auc": 0.71679,
+    "note": "The honest chronological held-out test did not reach 0.90. No synthetic weather/tracking data or future outcomes were used to inflate the result."
+  },
+  "weather_data_policy": "Olist has no historical weather observations. Live Open-Meteo weather is provided by a separate operational endpoint and is not a model feature. Synthetic weather/tracking remain separate under data/synthetic/."
+}

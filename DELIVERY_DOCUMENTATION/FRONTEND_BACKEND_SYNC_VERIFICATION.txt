@@ -1,0 +1,37 @@
+OnTime v5 frontend/backend synchronization verification
+Date: 2026-10-24
+
+Frontend:
+- frontend/assets/app.js parses successfully with Node.js.
+- Frontend script URL uses cache-busting version 20261024-live-sync.
+- Model page reads the live_scoring object returned by /api/model.
+- Batch page shows the model identifier used and labels synthetic benchmark outputs.
+
+Backend:
+- /api/health, /api/meta, /api/models and /api/model expose consistent live model identity.
+- /api/model returns active live-scoring metadata and the selected model's relevant benchmark only.
+- Historical queue evaluation values are not mixed into the active Model-page API payload.
+- Assistant model-quality answers follow the live scoring configuration.
+
+Training artifact:
+- Synthetic dataset: data/raw/synthetic_operational_orders.csv
+- Rows: 80,000; columns: 38
+- Train/validation/test: 56,000 / 12,000 / 12,000
+- Held-out chronological synthetic ROC-AUC: 0.9432527722
+- Held-out chronological synthetic PR-AUC: 0.8927009432
+- Metric reproduction and production model loading covered by test_synthetic_operational_production.py.
+- Scope: simulated benchmark only; not measured real-world delivery performance.
+
+Data integrity:
+- All nine original Olist raw CSV SHA-256 hashes match the existing manifest.
+- Synthetic raw CSV is separate from the nine original Olist datasets.
+
+Tests:
+- Python compile check: passed.
+- Frontend JavaScript syntax check: passed.
+- Full pytest suite: 205 passed, 2 compatibility warnings.
+- Warnings relate to a legacy XGBoost pickle loaded under a different version; portable JSON inference is retained.
+
+Weather:
+- Live weather uses the Open-Meteo API endpoint when requested.
+- If the provider is unavailable, the app does not silently substitute synthetic weather.

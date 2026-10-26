@@ -1,0 +1,1068 @@
+{
+ "focus": {
+  "health_beauty": {
+   "label": "Health & beauty",
+   "tier": "Essential",
+   "weight": 1.3,
+   "why": "Second-largest category. Includes personal-care and health items people need on a schedule.",
+   "impact": "A late health or hygiene product can mean a customer runs out of something they rely on; trust drops sharply.",
+   "playbook": [
+    "Treat HIGH and CRITICAL orders as same-day priority in the dispatch queue.",
+    "Offer an express upgrade at checkout on routes with a long transit history.",
+    "Message the customer proactively with a revised date instead of waiting for a complaint."
+   ],
+   "key": "health_beauty",
+   "stats": {
+    "n": 8621,
+    "late_rate": 8.98,
+    "platform_rate": 8.11,
+    "avg_days_late": 8.9,
+    "late_rate_peak": 14.3,
+    "late_rate_offpeak": 6.8,
+    "median_value": 104.26,
+    "median_weight_kg": 0.45,
+    "monthly": [
+     {
+      "month": "2016-10",
+      "rate": 2.78,
+      "n": 36
+     },
+     {
+      "month": "2017-01",
+      "rate": 1.27,
+      "n": 79
+     },
+     {
+      "month": "2017-02",
+      "rate": 2.1,
+      "n": 143
+     },
+     {
+      "month": "2017-03",
+      "rate": 6.32,
+      "n": 190
+     },
+     {
+      "month": "2017-04",
+      "rate": 5.95,
+      "n": 168
+     },
+     {
+      "month": "2017-05",
+      "rate": 3.45,
+      "n": 261
+     },
+     {
+      "month": "2017-06",
+      "rate": 4.74,
+      "n": 232
+     },
+     {
+      "month": "2017-07",
+      "rate": 4.83,
+      "n": 269
+     },
+     {
+      "month": "2017-08",
+      "rate": 4.14,
+      "n": 338
+     },
+     {
+      "month": "2017-09",
+      "rate": 7.58,
+      "n": 356
+     },
+     {
+      "month": "2017-10",
+      "rate": 4.97,
+      "n": 322
+     },
+     {
+      "month": "2017-11",
+      "rate": 11.56,
+      "n": 519
+     },
+     {
+      "month": "2017-12",
+      "rate": 6.37,
+      "n": 424
+     },
+     {
+      "month": "2018-01",
+      "rate": 6.39,
+      "n": 563
+     },
+     {
+      "month": "2018-02",
+      "rate": 14.31,
+      "n": 594
+     },
+     {
+      "month": "2018-03",
+      "rate": 27.6,
+      "n": 605
+     },
+     {
+      "month": "2018-04",
+      "rate": 6.04,
+      "n": 613
+     },
+     {
+      "month": "2018-05",
+      "rate": 12.33,
+      "n": 665
+     },
+     {
+      "month": "2018-06",
+      "rate": 1.4,
+      "n": 785
+     },
+     {
+      "month": "2018-07",
+      "rate": 9.61,
+      "n": 697
+     },
+     {
+      "month": "2018-08",
+      "rate": 11.04,
+      "n": 761
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "AL",
+      "rate": 30.6,
+      "n": 62
+     },
+     {
+      "key": "MA",
+      "rate": 28.0,
+      "n": 82
+     },
+     {
+      "key": "PI",
+      "rate": 20.0,
+      "n": 50
+     },
+     {
+      "key": "CE",
+      "rate": 17.8,
+      "n": 152
+     },
+     {
+      "key": "BA",
+      "rate": 16.9,
+      "n": 319
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 28.2
+     },
+     {
+      "pattern": 2,
+      "share": 26.2
+     },
+     {
+      "pattern": 3,
+      "share": 27.0
+     },
+     {
+      "pattern": 4,
+      "share": 10.2
+     },
+     {
+      "pattern": 5,
+      "share": 3.4
+     },
+     {
+      "pattern": 6,
+      "share": 5.0
+     }
+    ]
+   }
+  },
+  "baby": {
+   "label": "Baby",
+   "tier": "Essential",
+   "weight": 1.3,
+   "why": "Highest late rate of the large categories (9.2%) and products parents need on time.",
+   "impact": "Missing nappies, feeding or hygiene items cause immediate stress and very likely a lost customer.",
+   "playbook": [
+    "Never promise the platform's shortest window on long routes for this category.",
+    "Keep fast-moving baby SKUs in a regional hub close to the North-East and South demand.",
+    "Escalate any CRITICAL baby order to a person the same day."
+   ],
+   "key": "baby",
+   "stats": {
+    "n": 2794,
+    "late_rate": 9.23,
+    "platform_rate": 8.11,
+    "avg_days_late": 10.7,
+    "late_rate_peak": 16.9,
+    "late_rate_offpeak": 6.4,
+    "median_value": 108.3,
+    "median_weight_kg": 0.75,
+    "monthly": [
+     {
+      "month": "2017-01",
+      "rate": 3.23,
+      "n": 31
+     },
+     {
+      "month": "2017-03",
+      "rate": 4.88,
+      "n": 41
+     },
+     {
+      "month": "2017-04",
+      "rate": 10.64,
+      "n": 47
+     },
+     {
+      "month": "2017-05",
+      "rate": 3.12,
+      "n": 96
+     },
+     {
+      "month": "2017-06",
+      "rate": 11.11,
+      "n": 72
+     },
+     {
+      "month": "2017-07",
+      "rate": 0.0,
+      "n": 121
+     },
+     {
+      "month": "2017-08",
+      "rate": 0.84,
+      "n": 119
+     },
+     {
+      "month": "2017-09",
+      "rate": 5.03,
+      "n": 159
+     },
+     {
+      "month": "2017-10",
+      "rate": 8.21,
+      "n": 134
+     },
+     {
+      "month": "2017-11",
+      "rate": 18.58,
+      "n": 183
+     },
+     {
+      "month": "2017-12",
+      "rate": 16.42,
+      "n": 134
+     },
+     {
+      "month": "2018-01",
+      "rate": 13.53,
+      "n": 207
+     },
+     {
+      "month": "2018-02",
+      "rate": 19.39,
+      "n": 165
+     },
+     {
+      "month": "2018-03",
+      "rate": 17.87,
+      "n": 207
+     },
+     {
+      "month": "2018-04",
+      "rate": 6.07,
+      "n": 214
+     },
+     {
+      "month": "2018-05",
+      "rate": 6.91,
+      "n": 217
+     },
+     {
+      "month": "2018-06",
+      "rate": 0.49,
+      "n": 204
+     },
+     {
+      "month": "2018-07",
+      "rate": 7.32,
+      "n": 205
+     },
+     {
+      "month": "2018-08",
+      "rate": 10.5,
+      "n": 200
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "RJ",
+      "rate": 18.1,
+      "n": 332
+     },
+     {
+      "key": "PE",
+      "rate": 17.1,
+      "n": 41
+     },
+     {
+      "key": "BA",
+      "rate": 15.2,
+      "n": 92
+     },
+     {
+      "key": "DF",
+      "rate": 15.2,
+      "n": 66
+     },
+     {
+      "key": "PA",
+      "rate": 11.9,
+      "n": 42
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 21.3
+     },
+     {
+      "pattern": 2,
+      "share": 20.5
+     },
+     {
+      "pattern": 3,
+      "share": 20.2
+     },
+     {
+      "pattern": 4,
+      "share": 9.7
+     },
+     {
+      "pattern": 5,
+      "share": 25.6
+     },
+     {
+      "pattern": 6,
+      "share": 2.7
+     }
+    ]
+   }
+  },
+  "watches_gifts": {
+   "label": "Watches & gifts",
+   "tier": "Deadline-sensitive",
+   "weight": 1.2,
+   "why": "Bought for birthdays and festivals, so the date matters more than the item.",
+   "impact": "A gift that arrives after the occasion has lost most of its value, even if it arrives in perfect condition.",
+   "playbook": [
+    "Ask for the occasion date at checkout and flag orders whose promise is too close to it.",
+    "Add buffer days to promises in November and before festival dates.",
+    "Offer gift-message e-cards when a delay is predicted, so the customer has something on the day."
+   ],
+   "key": "watches_gifts",
+   "stats": {
+    "n": 5453,
+    "late_rate": 8.58,
+    "platform_rate": 8.11,
+    "avg_days_late": 9.2,
+    "late_rate_peak": 16.5,
+    "late_rate_offpeak": 5.4,
+    "median_value": 158.52,
+    "median_weight_kg": 0.35,
+    "monthly": [
+     {
+      "month": "2017-02",
+      "rate": 0.0,
+      "n": 32
+     },
+     {
+      "month": "2017-03",
+      "rate": 4.11,
+      "n": 73
+     },
+     {
+      "month": "2017-04",
+      "rate": 6.82,
+      "n": 88
+     },
+     {
+      "month": "2017-05",
+      "rate": 1.69,
+      "n": 118
+     },
+     {
+      "month": "2017-06",
+      "rate": 3.6,
+      "n": 111
+     },
+     {
+      "month": "2017-07",
+      "rate": 3.38,
+      "n": 148
+     },
+     {
+      "month": "2017-08",
+      "rate": 2.59,
+      "n": 193
+     },
+     {
+      "month": "2017-09",
+      "rate": 4.45,
+      "n": 247
+     },
+     {
+      "month": "2017-10",
+      "rate": 6.76,
+      "n": 281
+     },
+     {
+      "month": "2017-11",
+      "rate": 13.27,
+      "n": 422
+     },
+     {
+      "month": "2017-12",
+      "rate": 7.53,
+      "n": 332
+     },
+     {
+      "month": "2018-01",
+      "rate": 5.64,
+      "n": 319
+     },
+     {
+      "month": "2018-02",
+      "rate": 20.72,
+      "n": 304
+     },
+     {
+      "month": "2018-03",
+      "rate": 27.48,
+      "n": 404
+     },
+     {
+      "month": "2018-04",
+      "rate": 4.16,
+      "n": 457
+     },
+     {
+      "month": "2018-05",
+      "rate": 10.65,
+      "n": 582
+     },
+     {
+      "month": "2018-06",
+      "rate": 1.81,
+      "n": 443
+     },
+     {
+      "month": "2018-07",
+      "rate": 2.8,
+      "n": 500
+     },
+     {
+      "month": "2018-08",
+      "rate": 9.38,
+      "n": 384
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "MA",
+      "rate": 21.4,
+      "n": 56
+     },
+     {
+      "key": "RJ",
+      "rate": 14.9,
+      "n": 778
+     },
+     {
+      "key": "PA",
+      "rate": 14.1,
+      "n": 71
+     },
+     {
+      "key": "CE",
+      "rate": 13.4,
+      "n": 127
+     },
+     {
+      "key": "BA",
+      "rate": 12.7,
+      "n": 213
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 41.9
+     },
+     {
+      "pattern": 2,
+      "share": 22.6
+     },
+     {
+      "pattern": 3,
+      "share": 26.3
+     },
+     {
+      "pattern": 4,
+      "share": 4.9
+     },
+     {
+      "pattern": 5,
+      "share": 1.5
+     },
+     {
+      "pattern": 6,
+      "share": 2.8
+     }
+    ]
+   }
+  },
+  "computers_accessories": {
+   "label": "Computers & accessories",
+   "tier": "High value",
+   "weight": 1.15,
+   "why": "High order values and often work-critical purchases.",
+   "impact": "Delays hold up someone's work and lead to costly refunds and chargebacks.",
+   "playbook": [
+    "Insure and track high-value parcels; call the customer on CRITICAL alerts.",
+    "Use the national carrier's tracked service for orders above the category's median value.",
+    "Review sellers in this category with a late rate above 15% every month."
+   ],
+   "key": "computers_accessories",
+   "stats": {
+    "n": 6519,
+    "late_rate": 7.72,
+    "platform_rate": 8.11,
+    "avg_days_late": 9.3,
+    "late_rate_peak": 13.5,
+    "late_rate_offpeak": 4.5,
+    "median_value": 103.36,
+    "median_weight_kg": 0.34,
+    "monthly": [
+     {
+      "month": "2017-02",
+      "rate": 5.43,
+      "n": 92
+     },
+     {
+      "month": "2017-03",
+      "rate": 4.76,
+      "n": 147
+     },
+     {
+      "month": "2017-04",
+      "rate": 7.76,
+      "n": 116
+     },
+     {
+      "month": "2017-05",
+      "rate": 2.37,
+      "n": 253
+     },
+     {
+      "month": "2017-06",
+      "rate": 2.36,
+      "n": 212
+     },
+     {
+      "month": "2017-07",
+      "rate": 4.14,
+      "n": 266
+     },
+     {
+      "month": "2017-08",
+      "rate": 2.77,
+      "n": 289
+     },
+     {
+      "month": "2017-09",
+      "rate": 4.76,
+      "n": 210
+     },
+     {
+      "month": "2017-10",
+      "rate": 5.14,
+      "n": 253
+     },
+     {
+      "month": "2017-11",
+      "rate": 8.86,
+      "n": 429
+     },
+     {
+      "month": "2017-12",
+      "rate": 9.68,
+      "n": 248
+     },
+     {
+      "month": "2018-01",
+      "rate": 4.53,
+      "n": 574
+     },
+     {
+      "month": "2018-02",
+      "rate": 16.46,
+      "n": 790
+     },
+     {
+      "month": "2018-03",
+      "rate": 17.78,
+      "n": 630
+     },
+     {
+      "month": "2018-04",
+      "rate": 5.16,
+      "n": 465
+     },
+     {
+      "month": "2018-05",
+      "rate": 5.26,
+      "n": 399
+     },
+     {
+      "month": "2018-06",
+      "rate": 0.85,
+      "n": 351
+     },
+     {
+      "month": "2018-07",
+      "rate": 4.2,
+      "n": 381
+     },
+     {
+      "month": "2018-08",
+      "rate": 8.73,
+      "n": 378
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "CE",
+      "rate": 19.0,
+      "n": 79
+     },
+     {
+      "key": "MA",
+      "rate": 18.6,
+      "n": 59
+     },
+     {
+      "key": "RJ",
+      "rate": 13.8,
+      "n": 833
+     },
+     {
+      "key": "SC",
+      "rate": 13.5,
+      "n": 259
+     },
+     {
+      "key": "PB",
+      "rate": 12.5,
+      "n": 40
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 38.0
+     },
+     {
+      "pattern": 2,
+      "share": 17.1
+     },
+     {
+      "pattern": 3,
+      "share": 18.7
+     },
+     {
+      "pattern": 4,
+      "share": 17.1
+     },
+     {
+      "pattern": 5,
+      "share": 7.0
+     },
+     {
+      "pattern": 6,
+      "share": 2.2
+     }
+    ]
+   }
+  },
+  "furniture_decor": {
+   "label": "Furniture & decor",
+   "tier": "Bulky",
+   "weight": 1.05,
+   "why": "Heavy and bulky items that need special handling and often longer routes.",
+   "impact": "Bulky deliveries are hard to re-route, and failed delivery attempts add days.",
+   "playbook": [
+    "Route parcels above 10 kg to a carrier with a bulky-freight service.",
+    "Book delivery slots with the customer instead of open-ended delivery windows.",
+    "Set longer default promises for long-haul bulky orders."
+   ],
+   "key": "furniture_decor",
+   "stats": {
+    "n": 6208,
+    "late_rate": 8.57,
+    "platform_rate": 8.11,
+    "avg_days_late": 10.0,
+    "late_rate_peak": 14.6,
+    "late_rate_offpeak": 5.6,
+    "median_value": 104.94,
+    "median_weight_kg": 1.8,
+    "monthly": [
+     {
+      "month": "2016-10",
+      "rate": 0.0,
+      "n": 47
+     },
+     {
+      "month": "2017-01",
+      "rate": 5.43,
+      "n": 129
+     },
+     {
+      "month": "2017-02",
+      "rate": 5.16,
+      "n": 213
+     },
+     {
+      "month": "2017-03",
+      "rate": 7.97,
+      "n": 251
+     },
+     {
+      "month": "2017-04",
+      "rate": 9.38,
+      "n": 160
+     },
+     {
+      "month": "2017-05",
+      "rate": 5.36,
+      "n": 224
+     },
+     {
+      "month": "2017-06",
+      "rate": 4.52,
+      "n": 177
+     },
+     {
+      "month": "2017-07",
+      "rate": 3.29,
+      "n": 243
+     },
+     {
+      "month": "2017-08",
+      "rate": 5.08,
+      "n": 315
+     },
+     {
+      "month": "2017-09",
+      "rate": 6.42,
+      "n": 265
+     },
+     {
+      "month": "2017-10",
+      "rate": 5.34,
+      "n": 262
+     },
+     {
+      "month": "2017-11",
+      "rate": 18.27,
+      "n": 531
+     },
+     {
+      "month": "2017-12",
+      "rate": 7.72,
+      "n": 298
+     },
+     {
+      "month": "2018-01",
+      "rate": 6.94,
+      "n": 461
+     },
+     {
+      "month": "2018-02",
+      "rate": 18.18,
+      "n": 330
+     },
+     {
+      "month": "2018-03",
+      "rate": 20.75,
+      "n": 424
+     },
+     {
+      "month": "2018-04",
+      "rate": 3.33,
+      "n": 451
+     },
+     {
+      "month": "2018-05",
+      "rate": 9.73,
+      "n": 452
+     },
+     {
+      "month": "2018-06",
+      "rate": 0.65,
+      "n": 306
+     },
+     {
+      "month": "2018-07",
+      "rate": 4.13,
+      "n": 339
+     },
+     {
+      "month": "2018-08",
+      "rate": 8.79,
+      "n": 330
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "BA",
+      "rate": 18.4,
+      "n": 196
+     },
+     {
+      "key": "RJ",
+      "rate": 14.3,
+      "n": 813
+     },
+     {
+      "key": "SC",
+      "rate": 13.8,
+      "n": 268
+     },
+     {
+      "key": "GO",
+      "rate": 12.1,
+      "n": 99
+     },
+     {
+      "key": "ES",
+      "rate": 11.8,
+      "n": 110
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 24.8
+     },
+     {
+      "pattern": 2,
+      "share": 21.8
+     },
+     {
+      "pattern": 3,
+      "share": 19.9
+     },
+     {
+      "pattern": 4,
+      "share": 13.7
+     },
+     {
+      "pattern": 5,
+      "share": 18.4
+     },
+     {
+      "pattern": 6,
+      "share": 1.3
+     }
+    ]
+   }
+  },
+  "bed_bath_table": {
+   "label": "Bed, bath & table",
+   "tier": "High volume",
+   "weight": 1.0,
+   "why": "The single largest category (9,239 delivered orders), so small fixes add up.",
+   "impact": "Individually low urgency, but volume makes it the biggest source of late orders in absolute terms.",
+   "playbook": [
+    "Focus on peak-season capacity: most late orders here cluster in Nov and Feb-Mar.",
+    "Batch dispatch from the top sellers to cut first-mile delays.",
+    "Use the threshold planner to keep alert volume manageable for this category."
+   ],
+   "key": "bed_bath_table",
+   "stats": {
+    "n": 9239,
+    "late_rate": 8.78,
+    "platform_rate": 8.11,
+    "avg_days_late": 10.0,
+    "late_rate_peak": 17.9,
+    "late_rate_offpeak": 4.6,
+    "median_value": 105.87,
+    "median_weight_kg": 1.38,
+    "monthly": [
+     {
+      "month": "2017-01",
+      "rate": 4.65,
+      "n": 43
+     },
+     {
+      "month": "2017-02",
+      "rate": 2.17,
+      "n": 138
+     },
+     {
+      "month": "2017-03",
+      "rate": 5.44,
+      "n": 239
+     },
+     {
+      "month": "2017-04",
+      "rate": 4.76,
+      "n": 231
+     },
+     {
+      "month": "2017-05",
+      "rate": 4.35,
+      "n": 322
+     },
+     {
+      "month": "2017-06",
+      "rate": 3.09,
+      "n": 324
+     },
+     {
+      "month": "2017-07",
+      "rate": 1.6,
+      "n": 501
+     },
+     {
+      "month": "2017-08",
+      "rate": 3.4,
+      "n": 441
+     },
+     {
+      "month": "2017-09",
+      "rate": 3.95,
+      "n": 456
+     },
+     {
+      "month": "2017-10",
+      "rate": 5.69,
+      "n": 439
+     },
+     {
+      "month": "2017-11",
+      "rate": 21.15,
+      "n": 799
+     },
+     {
+      "month": "2017-12",
+      "rate": 9.68,
+      "n": 475
+     },
+     {
+      "month": "2018-01",
+      "rate": 5.83,
+      "n": 686
+     },
+     {
+      "month": "2018-02",
+      "rate": 22.11,
+      "n": 588
+     },
+     {
+      "month": "2018-03",
+      "rate": 23.88,
+      "n": 649
+     },
+     {
+      "month": "2018-04",
+      "rate": 6.51,
+      "n": 599
+     },
+     {
+      "month": "2018-05",
+      "rate": 7.69,
+      "n": 598
+     },
+     {
+      "month": "2018-06",
+      "rate": 1.09,
+      "n": 645
+     },
+     {
+      "month": "2018-07",
+      "rate": 2.56,
+      "n": 507
+     },
+     {
+      "month": "2018-08",
+      "rate": 8.48,
+      "n": 554
+     }
+    ],
+    "worst_states": [
+     {
+      "key": "CE",
+      "rate": 22.4,
+      "n": 67
+     },
+     {
+      "key": "ES",
+      "rate": 17.9,
+      "n": 195
+     },
+     {
+      "key": "RJ",
+      "rate": 16.6,
+      "n": 1353
+     },
+     {
+      "key": "GO",
+      "rate": 15.9,
+      "n": 189
+     },
+     {
+      "key": "BA",
+      "rate": 15.4,
+      "n": 214
+     }
+    ],
+    "pattern_mix": [
+     {
+      "pattern": 1,
+      "share": 38.2
+     },
+     {
+      "pattern": 2,
+      "share": 21.3
+     },
+     {
+      "pattern": 3,
+      "share": 17.9
+     },
+     {
+      "pattern": 4,
+      "share": 11.2
+     },
+     {
+      "pattern": 5,
+      "share": 9.4
+     },
+     {
+      "pattern": 6,
+      "share": 2.0
+     }
+    ]
+   }
+  }
+ },
+ "roadmap_note": "Other categories (sports & leisure, housewares, telephony, auto, toys and the rest) are scored by the same model but are outside the focused analysis. Extending the playbooks to them, and adding quick-commerce data, is on the roadmap."
+}

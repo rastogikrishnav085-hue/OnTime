@@ -1,0 +1,33 @@
+OnTime v5 frontend/backend synchronization and operational validation verification
+Date: 2026-10-24
+
+Frontend:
+- frontend/assets/app.js parses successfully with Node.js.
+- Frontend script URL uses cache-busting version 20261024-live-sync.
+- Model page reads the live_scoring object returned by /api/model.
+- Batch page shows the model identifier used and labels synthetic benchmark outputs.
+
+Backend and diagnostics:
+- /api/health, /api/meta, /api/models and /api/model expose consistent live model identity.
+- /api/health/diagnostics separates local readiness from external weather connectivity and real-world validation status.
+- Single and batch scoring responses include UTC scored_at timestamps; single scoring also echoes order_id.
+- Historical queue and dispatch-time live scoring remain separate; missing dispatch telemetry is not silently represented as observed data.
+
+Operational validation tooling:
+- scripts/validate_operational_outcomes.py requires prediction probabilities, stable order IDs, timestamps and separate observed labels/outcomes.
+- It rejects duplicate IDs and malformed labels/timestamps, reports join coverage and binary classification metrics, and computes a chronological last-20-percent holdout when possible.
+- It does not create real-world labels or automatically approve production use.
+- REAL_WORLD_VALIDATION_GUIDE.md documents the input schema and operating procedure.
+
+Automated and end-to-end verification:
+- Python compile check for backend/app, scripts and tests: passed.
+- Frontend JavaScript syntax check: passed.
+- Full pytest suite: 210 passed, 2 compatibility warnings.
+- Live local HTTP smoke test: 11 checks passed.
+- Weather provider request from this build environment failed with URLError; run the check from the actual deployment network.
+- Docker is unavailable in this environment; CI now runs the HTTP smoke script inside the built container.
+
+Data integrity and scope:
+- All nine original Olist raw CSV SHA-256 hashes match the existing manifest.
+- Synthetic dispatch benchmark remains simulated and is not real-world validation.
+- No observed real-world outcomes file was supplied, so real-world accuracy remains unvalidated until a prospective/chronological evaluation is run.

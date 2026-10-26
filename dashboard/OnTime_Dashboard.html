@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OnTime v5 — Model Overview</title>
+<style>
+:root{color-scheme:light;--ink:#17212b;--muted:#627182;--line:#dce3e9;--panel:#fff;--bg:#f5f7fa;--accent:#2259a6}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1040px;margin:36px auto;padding:0 20px}.eyebrow{text-transform:uppercase;letter-spacing:.12em;color:var(--accent);font-weight:700;font-size:12px}
+h1{font-size:clamp(28px,4vw,42px);line-height:1.1;margin:8px 0 12px}h2{font-size:20px;margin:0 0 12px}.lede{max-width:760px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}.card,section{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.k{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}.v{font-size:32px;font-weight:750;letter-spacing:-.04em;margin-top:5px}.sub{font-size:13px;color:var(--muted)}
+.notice{border-left:4px solid var(--accent);padding:12px 14px;background:#eaf1fb;border-radius:6px;margin:18px 0}
+a{color:var(--accent);font-weight:650}ul{padding-left:20px}li{margin:7px 0}.pill{display:inline-block;padding:4px 9px;border-radius:999px;background:#e6f4eb;color:#17643a;font-size:12px;font-weight:700}
+footer{color:var(--muted);font-size:13px;margin:22px 0}
+</style>
+</head>
+<body><main>
+<div class="eyebrow">OnTime v5 · current model overview</div>
+<h1>Synthetic dispatch benchmark</h1>
+<p class="lede">The live single-order and batch scoring workflows use the model selected in Settings. Fresh installations default to the enriched real-Olist checkout-time model; the synthetic dispatch model is opt-in for demonstrations. The live application is the source of truth for current settings, model availability and scoring responses.</p>
+<div class="grid">
+<div class="card"><div class="k">Benchmark model</div><div class="v" style="font-size:22px">Dispatch XGBoost</div><div class="sub">Synthetic demonstration only; opt-in, not the live default</div></div>
+<div class="card"><div class="k">Held-out ROC-AUC</div><div class="v">0.9433</div><div class="sub">Chronological synthetic test set</div></div>
+<div class="card"><div class="k">Held-out PR-AUC</div><div class="v">0.8927</div><div class="sub">Synthetic positive class</div></div>
+<div class="card"><div class="k">Dataset partitions</div><div class="v" style="font-size:22px">56k / 12k / 12k</div><div class="sub">Train / validation / test rows</div></div>
+</div>
+<section><h2>What the model uses</h2>
+<ul><li>Route distance and remaining delivery-time slack.</li><li>Weather severity and congestion forecasts.</li><li>Carrier reliability, facility backlog and dispatch capacity.</li><li>Route disruption alerts, tracking scan age and estimated truck delay.</li><li>Price, freight, product weight and purchase-to-dispatch lag.</li></ul>
+</section>
+<div class="notice"><b>Benchmark scope:</b> operational signals and target labels in this dataset are simulated. The reported metrics describe the synthetic dispatch task only; they are not measured real-world delivery results or calibrated probabilities. Provide actual dispatch telemetry and validate against later labelled outcomes before relying on alerts.</div>
+<section><h2>Dataset and artifacts</h2>
+<ul><li>Separate raw CSV: <code>data/raw/synthetic_operational_orders.csv</code>.</li><li>Portable trained model: <code>models/synthetic_operational/xgboost_synthetic_operational.json</code>.</li><li>Metrics and feature importance are saved beside the model.</li><li>The nine original Olist source CSVs remain separate and unchanged.</li></ul>
+</section>
+<section style="margin-top:14px"><h2>Open the live application</h2><p>Run <code>run_all.bat</code> from the project root and open <a href="http://localhost:8000">http://localhost:8000</a>. The live Model page reads the selected model and benchmark information from the FastAPI backend.</p></section>
+<footer>OnTime v5 · Static overview aligned to the live-scoring API contract.</footer>
+</main></body></html>

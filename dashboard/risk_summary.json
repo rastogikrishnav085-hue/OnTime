@@ -1,0 +1,99 @@
+{
+  "bands": [
+    {
+      "level": "LOW",
+      "n": 11440,
+      "late_rate": 2.6
+    },
+    {
+      "level": "MEDIUM",
+      "n": 5217,
+      "late_rate": 9.0
+    },
+    {
+      "level": "HIGH",
+      "n": 1875,
+      "late_rate": 23.5
+    },
+    {
+      "level": "CRITICAL",
+      "n": 762,
+      "late_rate": 47.1
+    }
+  ],
+  "n_test": 19294,
+  "n_flagged": 2431,
+  "flagged_share": 12.6,
+  "flagged_late_rate": 31.1,
+  "late_orders_caught": 48.3,
+  "base_late_rate": 8.1,
+  "top_drivers": [
+    {
+      "driver": "Seasonal timing of the order",
+      "n": 1671
+    },
+    {
+      "driver": "Length of promised delivery window",
+      "n": 403
+    },
+    {
+      "driver": "Long shipping distance",
+      "n": 177
+    },
+    {
+      "driver": "Delivery region's typical delay rate",
+      "n": 116
+    },
+    {
+      "driver": "Delivery state",
+      "n": 39
+    },
+    {
+      "driver": "Slow payment/order approval",
+      "n": 15
+    },
+    {
+      "driver": "Seller's track record of late deliveries",
+      "n": 6
+    },
+    {
+      "driver": "High freight cost per item",
+      "n": 2
+    }
+  ],
+  "actions": [
+    {
+      "action": "Peak-season order; prioritise in the dispatch queue and pad the customer ETA.",
+      "n": 1671
+    },
+    {
+      "action": "Promise window is tight for this route; send the customer an updated, realistic ETA now.",
+      "n": 403
+    },
+    {
+      "action": "Book an express / long-haul carrier option and track the first-mile scan closely.",
+      "n": 177
+    },
+    {
+      "action": "Use the most reliable carrier for this region and warn the customer proactively.",
+      "n": 155
+    },
+    {
+      "action": "Payment/approval was slow; fast-track picking so the lost time is recovered.",
+      "n": 15
+    },
+    {
+      "action": "Contact the seller to confirm dispatch date; escalate if not handed to carrier within 48h.",
+      "n": 6
+    },
+    {
+      "action": "High freight cost signals a hard route; confirm carrier and pickup slot in advance.",
+      "n": 2
+    },
+    {
+      "action": "Prioritise in today's dispatch queue and monitor tracking daily.",
+      "n": 2
+    }
+  ],
+  "n_urgent": 762
+}

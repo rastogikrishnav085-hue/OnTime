@@ -1,0 +1,548 @@
+{
+  "generated_utc": "2026-10-22T08:12:52+00:00",
+  "quick_run": false,
+  "protocol": [
+    "Stratified 80/20 split (random_state 42): 77,176 train / 19,294 test, the same split as notebooks 05-08.",
+    "Hyperparameters tuned by 3-fold CV on train only; weights and alert threshold chosen on out-of-fold train predictions.",
+    "Test rows scored once. Alert thresholds are F1-optimal on train (out-of-fold), never on test."
+  ],
+  "tuning": {
+    "xgb": {
+      "trials": 25,
+      "baseline_cv_auc": 0.7971,
+      "best_cv_auc": 0.7995300000000001,
+      "best_params": {
+        "colsample_bytree": 0.811649,
+        "gamma": 0.6617959999999999,
+        "learning_rate": 0.023152,
+        "max_depth": 9,
+        "min_child_weight": 5,
+        "n_estimators": 248,
+        "reg_alpha": 0.153884,
+        "reg_lambda": 1.377497,
+        "subsample": 0.8244969999999999
+      },
+      "top": [
+        {
+          "trial": 11,
+          "kind": "search",
+          "cv_roc_auc": 0.7995300000000001,
+          "cv_pr_auc": 0.32487000000000005,
+          "params": {
+            "colsample_bytree": 0.811649,
+            "gamma": 0.6617959999999999,
+            "learning_rate": 0.023152,
+            "max_depth": 9,
+            "min_child_weight": 5,
+            "n_estimators": 248,
+            "reg_alpha": 0.153884,
+            "reg_lambda": 1.377497,
+            "subsample": 0.8244969999999999
+          }
+        },
+        {
+          "trial": 24,
+          "kind": "search",
+          "cv_roc_auc": 0.79942,
+          "cv_pr_auc": 0.31732000000000005,
+          "params": {
+            "colsample_bytree": 0.941318,
+            "gamma": 0.37741399999999997,
+            "learning_rate": 0.03801,
+            "max_depth": 5,
+            "min_child_weight": 16,
+            "n_estimators": 357,
+            "reg_alpha": 2.081536,
+            "reg_lambda": 13.186686,
+            "subsample": 0.91195
+          }
+        },
+        {
+          "trial": 14,
+          "kind": "search",
+          "cv_roc_auc": 0.7993800000000001,
+          "cv_pr_auc": 0.32580000000000003,
+          "params": {
+            "colsample_bytree": 0.6143989999999999,
+            "gamma": 0.15396,
+            "learning_rate": 0.038974999999999996,
+            "max_depth": 8,
+            "min_child_weight": 2,
+            "n_estimators": 177,
+            "reg_alpha": 0.0064269999999999996,
+            "reg_lambda": 2.324042,
+            "subsample": 0.9533119999999999
+          }
+        },
+        {
+          "trial": 6,
+          "kind": "search",
+          "cv_roc_auc": 0.79808,
+          "cv_pr_auc": 0.31596,
+          "params": {
+            "colsample_bytree": 0.916597,
+            "gamma": 0.346729,
+            "learning_rate": 0.049214,
+            "max_depth": 4,
+            "min_child_weight": 8,
+            "n_estimators": 537,
+            "reg_alpha": 0.014223999999999999,
+            "reg_lambda": 3.405259,
+            "subsample": 0.818684
+          }
+        },
+        {
+          "trial": 2,
+          "kind": "search",
+          "cv_roc_auc": 0.7977900000000001,
+          "cv_pr_auc": 0.31319,
+          "params": {
+            "colsample_bytree": 0.800558,
+            "gamma": 1.416145,
+            "learning_rate": 0.020971,
+            "max_depth": 4,
+            "min_child_weight": 12,
+            "n_estimators": 563,
+            "reg_alpha": 0.006101,
+            "reg_lambda": 0.977833,
+            "subsample": 0.673362
+          }
+        }
+      ],
+      "all_cv_auc": [
+        0.7995300000000001,
+        0.79942,
+        0.7993800000000001,
+        0.79808,
+        0.7977900000000001,
+        0.7971,
+        0.7965,
+        0.7962400000000001,
+        0.7960100000000001,
+        0.79593,
+        0.7952100000000001,
+        0.7943,
+        0.7939200000000001,
+        0.7936900000000001,
+        0.79346,
+        0.79266,
+        0.7920800000000001,
+        0.7903100000000001,
+        0.7894300000000001,
+        0.78929,
+        0.78907,
+        0.7888700000000001,
+        0.7854200000000001,
+        0.7825500000000001,
+        0.7797200000000001
+      ]
+    },
+    "hgb": {
+      "trials": 10,
+      "best_cv_auc": 0.79803,
+      "best_params": {
+        "l2_regularization": 0.019948999999999998,
+        "learning_rate": 0.057581,
+        "max_depth": null,
+        "max_iter": 249,
+        "max_leaf_nodes": 54,
+        "min_samples_leaf": 43
+      },
+      "all_cv_auc": [
+        0.79803,
+        0.79742,
+        0.7968900000000001,
+        0.7966000000000001,
+        0.7964500000000001,
+        0.79605,
+        0.79593,
+        0.7950400000000001,
+        0.7949900000000001,
+        0.7931400000000001
+      ]
+    }
+  },
+  "weights": {
+    "xgb": 0.55,
+    "hgb": 0.4,
+    "lr": 0.05,
+    "rf": 0.0
+  },
+  "oof_auc": {
+    "xgb": 0.802,
+    "hgb": 0.8006,
+    "lr": 0.7131,
+    "rf": 0.7631
+  },
+  "oof_blend_auc": 0.8074,
+  "stack": {
+    "key": "stack_cv",
+    "label": "Stacked ensemble (meta-learner), cross-validated on train - not served",
+    "served": false,
+    "roc_auc": 0.8068997391355651,
+    "pr_auc": 0.33383734477132254
+  },
+  "models": [
+    {
+      "key": "production_xgb",
+      "label": "XGBoost - current production model",
+      "served": false,
+      "roc_auc": 0.8041114385070074,
+      "pr_auc": 0.336062191878717,
+      "precision": 0.3109831345125463,
+      "recall": 0.4830670926517572,
+      "f1": 0.3783783783783784,
+      "flagged_share": 0.1259977194982896,
+      "recall_at_top10pct": 0.4230031948881789,
+      "threshold": 0.6177839040756226
+    },
+    {
+      "key": "xgb_tuned",
+      "label": "XGBoost - re-tuned (wider search)",
+      "served": false,
+      "roc_auc": 0.8070044801238092,
+      "pr_auc": 0.34333418083685335,
+      "precision": 0.31219903691813805,
+      "recall": 0.4971246006389776,
+      "f1": 0.38353463150110917,
+      "flagged_share": 0.12915932414222037,
+      "recall_at_top10pct": 0.4389776357827476,
+      "threshold": 0.595428466796875
+    },
+    {
+      "key": "hgb_tuned",
+      "label": "Histogram gradient boosting - tuned",
+      "served": false,
+      "roc_auc": 0.801935638383854,
+      "pr_auc": 0.3300062975063949,
+      "precision": 0.31166192604632265,
+      "recall": 0.49009584664536743,
+      "f1": 0.381023348236463,
+      "flagged_share": 0.12755260702809162,
+      "recall_at_top10pct": 0.4191693290734824,
+      "threshold": 0.649589342106018
+    },
+    {
+      "key": "lr",
+      "label": "Logistic regression",
+      "served": false,
+      "roc_auc": 0.7100697634982628,
+      "pr_auc": 0.18641511301722796,
+      "precision": 0.17409402546523017,
+      "recall": 0.45431309904153355,
+      "f1": 0.25172596919808815,
+      "flagged_share": 0.21167202239038044,
+      "recall_at_top10pct": 0.27987220447284344,
+      "threshold": 0.5961606905055137
+    },
+    {
+      "key": "rf",
+      "label": "Random forest",
+      "served": false,
+      "roc_auc": 0.7601288983934015,
+      "pr_auc": 0.28323523055052857,
+      "precision": 0.29181184668989546,
+      "recall": 0.4281150159744409,
+      "f1": 0.34706034706034705,
+      "flagged_share": 0.11900072561418057,
+      "recall_at_top10pct": 0.38849840255591056,
+      "threshold": 0.565391818725512
+    },
+    {
+      "key": "blend",
+      "label": "Weighted ensemble (blend)",
+      "served": true,
+      "roc_auc": 0.8093773905571944,
+      "pr_auc": 0.34286911862137487,
+      "precision": 0.331856446610545,
+      "recall": 0.47859424920127797,
+      "f1": 0.39194139194139194,
+      "flagged_share": 0.11697937182543797,
+      "recall_at_top10pct": 0.4389776357827476,
+      "threshold": 0.629068581993008
+    }
+  ],
+  "backtest": {
+    "production_xgb": [
+      {
+        "month": "2017-04",
+        "auc": 0.5957,
+        "n": 2303
+      },
+      {
+        "month": "2017-05",
+        "auc": 0.5937,
+        "n": 3545
+      },
+      {
+        "month": "2017-06",
+        "auc": 0.5648,
+        "n": 3135
+      },
+      {
+        "month": "2017-07",
+        "auc": 0.6075,
+        "n": 3872
+      },
+      {
+        "month": "2017-08",
+        "auc": 0.65,
+        "n": 4193
+      },
+      {
+        "month": "2017-09",
+        "auc": 0.6643,
+        "n": 4150
+      },
+      {
+        "month": "2017-10",
+        "auc": 0.6611,
+        "n": 4478
+      },
+      {
+        "month": "2017-11",
+        "auc": 0.6414,
+        "n": 7288
+      },
+      {
+        "month": "2017-12",
+        "auc": 0.6816,
+        "n": 5513
+      },
+      {
+        "month": "2018-01",
+        "auc": 0.5908,
+        "n": 7069
+      },
+      {
+        "month": "2018-02",
+        "auc": 0.7105,
+        "n": 6555
+      },
+      {
+        "month": "2018-03",
+        "auc": 0.7302,
+        "n": 7003
+      },
+      {
+        "month": "2018-04",
+        "auc": 0.7467,
+        "n": 6798
+      },
+      {
+        "month": "2018-05",
+        "auc": 0.6999,
+        "n": 6749
+      },
+      {
+        "month": "2018-06",
+        "auc": 0.7702,
+        "n": 6096
+      },
+      {
+        "month": "2018-07",
+        "auc": 0.6365,
+        "n": 6156
+      },
+      {
+        "month": "2018-08",
+        "auc": 0.7007,
+        "n": 6351
+      }
+    ],
+    "xgb_tuned": [
+      {
+        "month": "2017-04",
+        "auc": 0.601,
+        "n": 2303
+      },
+      {
+        "month": "2017-05",
+        "auc": 0.6007,
+        "n": 3545
+      },
+      {
+        "month": "2017-06",
+        "auc": 0.556,
+        "n": 3135
+      },
+      {
+        "month": "2017-07",
+        "auc": 0.6085,
+        "n": 3872
+      },
+      {
+        "month": "2017-08",
+        "auc": 0.6386,
+        "n": 4193
+      },
+      {
+        "month": "2017-09",
+        "auc": 0.6702,
+        "n": 4150
+      },
+      {
+        "month": "2017-10",
+        "auc": 0.67,
+        "n": 4478
+      },
+      {
+        "month": "2017-11",
+        "auc": 0.6426,
+        "n": 7288
+      },
+      {
+        "month": "2017-12",
+        "auc": 0.7017,
+        "n": 5513
+      },
+      {
+        "month": "2018-01",
+        "auc": 0.5819,
+        "n": 7069
+      },
+      {
+        "month": "2018-02",
+        "auc": 0.7136,
+        "n": 6555
+      },
+      {
+        "month": "2018-03",
+        "auc": 0.7334,
+        "n": 7003
+      },
+      {
+        "month": "2018-04",
+        "auc": 0.7456,
+        "n": 6798
+      },
+      {
+        "month": "2018-05",
+        "auc": 0.7034,
+        "n": 6749
+      },
+      {
+        "month": "2018-06",
+        "auc": 0.755,
+        "n": 6096
+      },
+      {
+        "month": "2018-07",
+        "auc": 0.6502,
+        "n": 6156
+      },
+      {
+        "month": "2018-08",
+        "auc": 0.7132,
+        "n": 6351
+      }
+    ],
+    "blend": [
+      {
+        "month": "2017-04",
+        "auc": 0.6091,
+        "n": 2303
+      },
+      {
+        "month": "2017-05",
+        "auc": 0.6199,
+        "n": 3545
+      },
+      {
+        "month": "2017-06",
+        "auc": 0.5874,
+        "n": 3135
+      },
+      {
+        "month": "2017-07",
+        "auc": 0.6431,
+        "n": 3872
+      },
+      {
+        "month": "2017-08",
+        "auc": 0.6529,
+        "n": 4193
+      },
+      {
+        "month": "2017-09",
+        "auc": 0.6839,
+        "n": 4150
+      },
+      {
+        "month": "2017-10",
+        "auc": 0.6863,
+        "n": 4478
+      },
+      {
+        "month": "2017-11",
+        "auc": 0.6434,
+        "n": 7288
+      },
+      {
+        "month": "2017-12",
+        "auc": 0.7188,
+        "n": 5513
+      },
+      {
+        "month": "2018-01",
+        "auc": 0.6204,
+        "n": 7069
+      },
+      {
+        "month": "2018-02",
+        "auc": 0.717,
+        "n": 6555
+      },
+      {
+        "month": "2018-03",
+        "auc": 0.7398,
+        "n": 7003
+      },
+      {
+        "month": "2018-04",
+        "auc": 0.7541,
+        "n": 6798
+      },
+      {
+        "month": "2018-05",
+        "auc": 0.7136,
+        "n": 6749
+      },
+      {
+        "month": "2018-06",
+        "auc": 0.7655,
+        "n": 6096
+      },
+      {
+        "month": "2018-07",
+        "auc": 0.6557,
+        "n": 6156
+      },
+      {
+        "month": "2018-08",
+        "auc": 0.7476,
+        "n": 6351
+      }
+    ]
+  },
+  "backtest_mean_auc": {
+    "production_xgb": 0.6615,
+    "xgb_tuned": 0.6639,
+    "blend": 0.6799
+  },
+  "served": "blend",
+  "decision": "Random test split: blend 0.8094 vs production XGBoost 0.8041 (difference +0.0053). Monthly backtest: blend 0.6799 vs 0.6615 mean AUC (difference +0.0184, blend better in 16 of 17 months). The blend is served: it clears both bars (better on the monthly backtest by at least 0.005 AUC in at least 60% of months, and no worse than 0.005 AUC on the random split).",
+  "paired_backtest": {
+    "mean_diff": 0.018405882352941175,
+    "months_blend_better": 16,
+    "months": 17,
+    "test_diff": 0.005265952050186984
+  },
+  "member_labels": {
+    "xgb": "XGBoost (gradient boosting)",
+    "hgb": "Histogram gradient boosting",
+    "lr": "Logistic regression",
+    "rf": "Random forest"
+  },
+  "runtime_minutes": 16.6
+}

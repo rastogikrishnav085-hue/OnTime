@@ -1,0 +1,152 @@
+[
+  {
+    "feature": "customer_state",
+    "label": "Delivery state",
+    "importance": 0.114784
+  },
+  {
+    "feature": "net_open",
+    "label": "Orders in progress, whole network",
+    "importance": 0.085497
+  },
+  {
+    "feature": "lane_transit_d_hist",
+    "label": "Route's usual transit time (days)",
+    "importance": 0.071947
+  },
+  {
+    "feature": "product_category",
+    "label": "product category",
+    "importance": 0.057641
+  },
+  {
+    "feature": "net_new_7d",
+    "label": "New orders in the last 7 days",
+    "importance": 0.048595
+  },
+  {
+    "feature": "seller_state",
+    "label": "seller state",
+    "importance": 0.041431
+  },
+  {
+    "feature": "customer_state_historical_delay_rate",
+    "label": "Delivery region's typical delay rate",
+    "importance": 0.028946
+  },
+  {
+    "feature": "promise_minus_expected",
+    "label": "Promise minus expected hand-over and transit (days)",
+    "importance": 0.027656
+  },
+  {
+    "feature": "lane_late_hist",
+    "label": "Route's past late rate",
+    "importance": 0.023832
+  },
+  {
+    "feature": "promise_minus_lane_transit",
+    "label": "Promise minus route's usual transit (days)",
+    "importance": 0.019169
+  },
+  {
+    "feature": "net_late_30d",
+    "label": "Network late rate, last 30 days",
+    "importance": 0.017803
+  },
+  {
+    "feature": "lane_open",
+    "label": "Orders in progress on this route",
+    "importance": 0.016354
+  },
+  {
+    "feature": "holidays_in_promise",
+    "label": "Public holidays inside the promise window",
+    "importance": 0.01514
+  },
+  {
+    "feature": "cust_zip3_late_hist",
+    "label": "Late rate of this postcode area",
+    "importance": 0.014167
+  },
+  {
+    "feature": "purchase_month",
+    "label": "Seasonal timing of the order",
+    "importance": 0.013943
+  },
+  {
+    "feature": "avg_freight",
+    "label": "High freight cost per item",
+    "importance": 0.013516
+  },
+  {
+    "feature": "seller_customer_distance_km",
+    "label": "Long shipping distance",
+    "importance": 0.013409
+  },
+  {
+    "feature": "promise_business_days",
+    "label": "Business days inside the promise window",
+    "importance": 0.013266
+  },
+  {
+    "feature": "days_from_black_friday",
+    "label": "Days from Black Friday",
+    "importance": 0.012334
+  },
+  {
+    "feature": "promised_delivery_days",
+    "label": "Length of promised delivery window",
+    "importance": 0.011675
+  },
+  {
+    "feature": "seller_handling_h_hist",
+    "label": "Seller's usual hand-over time (hours)",
+    "importance": 0.011386
+  },
+  {
+    "feature": "sell_lat",
+    "label": "Seller latitude",
+    "importance": 0.010963
+  },
+  {
+    "feature": "net_overdue_open",
+    "label": "Overdue orders, whole network",
+    "importance": 0.009819
+  },
+  {
+    "feature": "n_distinct_sellers",
+    "label": "Order split across multiple sellers",
+    "importance": 0.009809
+  },
+  {
+    "feature": "n_items",
+    "label": "Multiple items in one order",
+    "importance": 0.0097
+  },
+  {
+    "feature": "lane_n_hist",
+    "label": "Past orders on this route",
+    "importance": 0.00948
+  },
+  {
+    "feature": "promise_minus_limit",
+    "label": "Promise minus seller's shipping deadline (days)",
+    "importance": 0.00944
+  },
+  {
+    "feature": "cust_lng",
+    "label": "Customer longitude",
+    "importance": 0.009357
+  },
+  {
+    "feature": "cust_lat",
+    "label": "Customer latitude",
+    "importance": 0.008836
+  },
+  {
+    "feature": "seller_historical_delay_rate",
+    "label": "Seller's track record of late deliveries",
+    "importance": 0.008826
+  }
+]

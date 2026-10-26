@@ -1,0 +1,14 @@
+{
+  "test_n": 19294,
+  "late_rate": 0.05291800559759511,
+  "enriched_auc": 0.7167854361211046,
+  "core_ensemble_auc": 0.590705993380513,
+  "enriched_pr_auc": 0.10243962261404872,
+  "core_ensemble_pr_auc": 0.0661835157388851,
+  "paired_auc_difference": 0.12568529390036054,
+  "paired_auc_difference_ci95": [
+    0.11076969682015637,
+    0.14175178239226344
+  ],
+  "bootstrap_resamples": 500
+}

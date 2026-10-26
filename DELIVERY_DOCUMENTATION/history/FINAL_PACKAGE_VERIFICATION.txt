@@ -1,0 +1,28 @@
+OnTime v5 production package verification after cleanup
+Date: 2026-10-24
+
+Cleanup
+- Removed verified duplicate/unused app-side simulated tracking copies (6 files), unreferenced 1,000-row synthetic sample, 2 standalone experimental scripts, superseded handoff document, and superseded duplicate test-results file.
+- Removed caches and bytecode created during test execution before packaging.
+- Cleanup report: CLEANUP_REMOVAL_REPORT.md
+- No real .env, local database, or SQLite file was found. .env.example is preserved.
+
+Production/model checks
+- Portable synthetic operational XGBoost JSON and production engine load successfully (covered by tests).
+- Synthetic raw CSV: 80,000 rows, 38 columns; 56,000 train / 12,000 validation / 12,000 chronological held-out test rows.
+- Saved model held-out synthetic test ROC-AUC: 0.9432527722; PR-AUC: 0.8927009432.
+- Nine original Olist CSV SHA-256 hashes match data/processed/raw_manifest.json.
+- Historical risk queue remains a separate view based on stored historical features.
+- Synthetic score is explicitly a synthetic dispatch benchmark, not real-world Olist performance.
+
+Tests
+- Full suite: 210 passed, 2 warnings.
+- Live HTTP smoke test: 11 checks passed against a running local server.
+- Added chronological validation CLI for timestamped predictions and separate observed outcomes.
+- Added readiness diagnostics and UTC prediction timestamps.
+- Weather request failed with URLError from this build environment; target-network check remains necessary.
+- Docker unavailable in this build environment; container smoke test added to CI.
+- Warnings: existing XGBoost 3.4.1 pickle tested under XGBoost 3.1.3; portable JSON inference is included.
+
+Scope caveat
+- The synthetic benchmark exceeds 0.91 ROC-AUC on its held-out simulated test set. The score is clearly labelled as synthetic and is not presented as measured real-world performance.

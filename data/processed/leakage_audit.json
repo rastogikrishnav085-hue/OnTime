@@ -1,0 +1,28 @@
+{
+  "cuts": {
+    "2017-06-01": {
+      "orders_checked": 11064,
+      "features_that_moved": [],
+      "median_filled_that_moved": []
+    },
+    "2017-11-01": {
+      "orders_checked": 30892,
+      "features_that_moved": [],
+      "median_filled_that_moved": []
+    },
+    "2018-03-01": {
+      "orders_checked": 57317,
+      "features_that_moved": [],
+      "median_filled_that_moved": []
+    },
+    "2018-06-15": {
+      "orders_checked": 80804,
+      "features_that_moved": [],
+      "median_filled_that_moved": []
+    }
+  },
+  "n_features_checked": 70,
+  "leaking_features": [],
+  "median_filled_features_that_moved": [],
+  "verdict": "PASS: no feature depends on outcomes after the order's purchase time"
+}

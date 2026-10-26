@@ -1,0 +1,235 @@
+{
+ "delivery_model": [
+  {
+   "key": "Direct (point-to-point)",
+   "rate": 6.46,
+   "n": 21471
+  },
+  {
+   "key": "Regional hub",
+   "rate": 8.29,
+   "n": 38524
+  },
+  {
+   "key": "Hub-and-spoke (national)",
+   "rate": 8.9,
+   "n": 36475
+  }
+ ],
+ "transfers": [
+  {
+   "key": "0",
+   "rate": 6.46,
+   "n": 21471
+  },
+  {
+   "key": "1",
+   "rate": 8.29,
+   "n": 38524
+  },
+  {
+   "key": "2",
+   "rate": 7.0,
+   "n": 26068
+  },
+  {
+   "key": "3",
+   "rate": 13.67,
+   "n": 10407
+  }
+ ],
+ "shipping_mode": [
+  {
+   "key": "Express",
+   "rate": 9.68,
+   "n": 21874
+  },
+  {
+   "key": "Standard",
+   "rate": 7.77,
+   "n": 67836
+  },
+  {
+   "key": "Economy",
+   "rate": 6.49,
+   "n": 6760
+  }
+ ],
+ "carrier": [
+  {
+   "key": "Carrier A (national express)",
+   "rate": 9.15,
+   "n": 40178
+  },
+  {
+   "key": "Carrier B (regional)",
+   "rate": 7.21,
+   "n": 41433
+  },
+  {
+   "key": "Carrier C (economy)",
+   "rate": 7.83,
+   "n": 14859
+  }
+ ],
+ "last_mile_hub": [
+  {
+   "key": "Belem PA",
+   "rate": 9.8,
+   "n": 1796
+  },
+  {
+   "key": "Brasilia DF",
+   "rate": 7.97,
+   "n": 5624
+  },
+  {
+   "key": "Cajamar SP",
+   "rate": 7.45,
+   "n": 66193
+  },
+  {
+   "key": "Curitiba PR",
+   "rate": 7.05,
+   "n": 13813
+  },
+  {
+   "key": "Recife PE",
+   "rate": 14.33,
+   "n": 9044
+  }
+ ],
+ "lanes": [
+  {
+   "from": "South",
+   "to": "North-East",
+   "rate": 15.26,
+   "n": 839,
+   "hubs": "Curitiba PR > Recife PE"
+  },
+  {
+   "from": "North-East",
+   "to": "South",
+   "rate": 15.11,
+   "n": 139,
+   "hubs": "Recife PE > Curitiba PR"
+  },
+  {
+   "from": "South-East",
+   "to": "North-East",
+   "rate": 14.42,
+   "n": 7596,
+   "hubs": "Cajamar SP > Recife PE"
+  },
+  {
+   "from": "Centre-West",
+   "to": "North-East",
+   "rate": 12.79,
+   "n": 172,
+   "hubs": "Brasilia DF > Recife PE"
+  },
+  {
+   "from": "North-East",
+   "to": "North-East",
+   "rate": 11.32,
+   "n": 433,
+   "hubs": "Recife PE > Recife PE"
+  },
+  {
+   "from": "North-East",
+   "to": "Centre-West",
+   "rate": 10.92,
+   "n": 119,
+   "hubs": "Recife PE > Brasilia DF"
+  },
+  {
+   "from": "South-East",
+   "to": "North",
+   "rate": 10.21,
+   "n": 1509,
+   "hubs": "Cajamar SP > Belem PA"
+  },
+  {
+   "from": "South-East",
+   "to": "Centre-West",
+   "rate": 8.57,
+   "n": 4655,
+   "hubs": "Cajamar SP > Brasilia DF"
+  },
+  {
+   "from": "North-East",
+   "to": "South-East",
+   "rate": 8.4,
+   "n": 786,
+   "hubs": "Recife PE > Cajamar SP"
+  },
+  {
+   "from": "Centre-West",
+   "to": "South",
+   "rate": 8.2,
+   "n": 122,
+   "hubs": "Brasilia DF > Curitiba PR"
+  },
+  {
+   "from": "South-East",
+   "to": "South-East",
+   "rate": 7.76,
+   "n": 56292,
+   "hubs": "Cajamar SP > Cajamar SP"
+  },
+  {
+   "from": "South-East",
+   "to": "South",
+   "rate": 7.54,
+   "n": 10488,
+   "hubs": "Cajamar SP > Curitiba PR"
+  },
+  {
+   "from": "South",
+   "to": "North",
+   "rate": 7.0,
+   "n": 200,
+   "hubs": "Curitiba PR > Belem PA"
+  },
+  {
+   "from": "South",
+   "to": "South-East",
+   "rate": 5.64,
+   "n": 8206,
+   "hubs": "Curitiba PR > Cajamar SP"
+  },
+  {
+   "from": "South",
+   "to": "South",
+   "rate": 4.97,
+   "n": 3061,
+   "hubs": "Curitiba PR > Curitiba PR"
+  },
+  {
+   "from": "Centre-West",
+   "to": "Centre-West",
+   "rate": 4.31,
+   "n": 209,
+   "hubs": "Brasilia DF > Brasilia DF"
+  },
+  {
+   "from": "South",
+   "to": "Centre-West",
+   "rate": 4.21,
+   "n": 641,
+   "hubs": "Curitiba PR > Brasilia DF"
+  },
+  {
+   "from": "Centre-West",
+   "to": "South-East",
+   "rate": 3.82,
+   "n": 891,
+   "hubs": "Brasilia DF > Cajamar SP"
+  }
+ ],
+ "sensitivity": {
+  "without simulated fields": 0.8041,
+  "with simulated fields": 0.8055,
+  "lift": 0.0014
+ }
+}

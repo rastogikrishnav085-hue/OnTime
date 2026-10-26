@@ -1,0 +1,17 @@
+data/raw/
+data/processed/*.csv
+!data/processed/rolling_backtest_results.csv
+!data/processed/ontime_model_ready.csv
+notebooks/
+submission_documents/
+dashboard/charts/
+dashboard/*.html
+backend/ontime.db
+backend/settings.json
+models/local_rebuild/
+.venv/
+.git/
+**/__pycache__
+.pytest_cache
+.env
+*.zip

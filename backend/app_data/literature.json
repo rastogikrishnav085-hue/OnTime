@@ -1,0 +1,333 @@
+{
+ "title": "Literature review and related work",
+ "updated": "2026-10-20",
+ "intro": "OnTime sits where three bodies of work meet: machine learning for late-delivery and lead-time prediction, tree-based and ensemble models for tabular data, and the practice of making a model usable (leak-free validation, imbalanced evaluation, explanations, cost-based thresholds). This page lists what each source says in one or two plain sentences, and where OnTime uses it. Summaries are written in our own words from the abstracts and papers.",
+ "how_to_read": "Each card: who and when, what the work found, and what OnTime takes from it. Links open the publisher or arXiv page.",
+ "themes": [
+  {
+   "key": "delivery",
+   "title": "1. Predicting late deliveries and delivery times",
+   "summary": "Most applied studies use gradient-boosted or random-forest models on order and shipment records. They agree that tree ensembles beat linear models, and that history about the supplier or lane is a strong signal. They rarely test how the model behaves month after month, which is the gap OnTime's rolling backtest addresses.",
+   "papers": [
+    {
+     "id": "brintrup2020",
+     "authors": "Brintrup, A., Pak, J., Ratiney, D., Pearce, T., Wichmann, P., Woodall, P., McFarlane, D.",
+     "year": 2020,
+     "title": "Supply chain data analytics for predicting supplier disruptions: a case study in complex asset manufacturing",
+     "venue": "International Journal of Production Research, 58(11), 3330-3341",
+     "link": "https://doi.org/10.1080/00207543.2019.1685705",
+     "what": "Predicts which supplier orders will arrive late from a manufacturer's historical records. Engineered features describing each supplier's past behaviour (called agility) lifted results over the raw fields, and the best method predicted late orders with about 80% accuracy.",
+     "used": "The same idea behind OnTime's three past-delay-rate features (seller, category, delivery state), which are the strongest inputs after route and promise length."
+    },
+    {
+     "id": "preethi2021",
+     "authors": "Preethi V., Sundaram, N., Tallamraju, R. B.",
+     "year": 2021,
+     "title": "Online Fashion Commerce: Modelling Customer Promise Date",
+     "venue": "arXiv:2105.00315",
+     "link": "https://arxiv.org/abs/2105.00315",
+     "what": "Models the date promised to an e-commerce customer. Errors cost differently in each direction (promising too early causes a breach, too late loses sales). Compares LightGBM, XGBoost, random forest, LSTM and time-series models; LightGBM was slightly more accurate than XGBoost and about 8 times faster to train, and random forest was behind both. Trains on recent data and picks validation days that look like the test day.",
+     "used": "Supports the Alert planner (an alert threshold should follow the cost of a late delivery versus the cost of a check), monthly retraining, and the histogram gradient boosting member of the ensemble."
+    },
+    {
+     "id": "lesmana2025",
+     "authors": "Lesmana, S. P., Hermawati, D., Mukaromah, M., Bukhari, I. A., Puspitasari, N.",
+     "year": 2025,
+     "title": "Machine Learning Implementation for E-commerce Delivery Delay Prediction Using XGBoost Algorithm",
+     "venue": "Green Engineering: Journal of Engineering and Applied Science, 2(3)",
+     "link": "https://garuda.kemdiktisaintek.go.id/documents/detail/5343582",
+     "what": "Applies XGBoost to about 96,000 delivery records and stresses that when almost every order is on time, a model drifts towards predicting 'on time' and fails to learn delay patterns.",
+     "used": "OnTime reports precision, recall and PR-AUC rather than accuracy, and trains with class weighting (scale_pos_weight) for the same reason."
+    },
+    {
+     "id": "rahman2025",
+     "authors": "Rahman, M. S., Ray, S. K.",
+     "year": 2025,
+     "title": "Predicting on-time deliveries in e-commerce: a machine learning approach to shipment performance analysis",
+     "venue": "ICEBTM 2025 (International Conference on Economics, Business and Technology Management), Independent University, Bangladesh",
+     "link": "https://ar.iub.edu.bd/handle/11348/1525",
+     "what": "Compares logistic regression, decision tree, random forest and SVM on 10,999 shipment records with 12 fields. Random forest, an ensemble, did better than the single models on accuracy, F1 and AUC-ROC.",
+     "used": "Consistent with OnTime's own comparison (logistic regression 0.71 AUC, decision tree 0.76, random forest 0.77, tuned XGBoost 0.80)."
+    },
+    {
+     "id": "rathi2024",
+     "authors": "Rathi, A.",
+     "year": 2024,
+     "title": "Optimising Supply Chain Performance with Machine Learning for Predicting Late Deliveries",
+     "venue": "MSc thesis, National College of Ireland",
+     "link": "https://norma.ncirl.ie/8618/",
+     "what": "Reports random forest as the best of three models after tuning, with 97.58% accuracy on its data set.",
+     "used": "A caution rather than a benchmark: accuracy that high depends on the data set's class balance and on which fields are allowed as inputs, and accuracy is a weak measure when only about 8% of orders are late. OnTime's numbers are not comparable to it."
+    },
+    {
+     "id": "bandarapu2024",
+     "authors": "Bandarapu, S.",
+     "year": 2024,
+     "title": "Enhancing E-commerce Supply Chain and Shipping Efficiency with Machine Learning and Deep Learning Models",
+     "venue": "MSc thesis, National College of Ireland",
+     "link": "https://norma.ncirl.ie/8680/",
+     "what": "Predicts scheduled and actual shipping durations on the DataCo supply-chain data set and finds tree-based models beat deep-learning models on this tabular data, with XGBoost the most accurate.",
+     "used": "Supports staying with tree-based models instead of a neural network for OnTime."
+    }
+   ]
+  },
+  {
+   "key": "ensembles",
+   "title": "2. Tree models and ensembles for tabular data",
+   "summary": "Boosted trees are the standard choice for tables of mixed numbers and categories, and combining models that make different mistakes usually helps, but only when the members are individually good and genuinely different.",
+   "papers": [
+    {
+     "id": "chen2016",
+     "authors": "Chen, T., Guestrin, C.",
+     "year": 2016,
+     "title": "XGBoost: A Scalable Tree Boosting System",
+     "venue": "Proceedings of the 22nd ACM SIGKDD Conference on Knowledge Discovery and Data Mining, 785-794",
+     "link": "https://doi.org/10.1145/2939672.2939785",
+     "what": "Describes the XGBoost system: regularised gradient-boosted trees with efficient handling of sparse data and missing values.",
+     "used": "OnTime's production model and the exact TreeSHAP reasons are built on it."
+    },
+    {
+     "id": "breiman2001",
+     "authors": "Breiman, L.",
+     "year": 2001,
+     "title": "Random Forests",
+     "venue": "Machine Learning, 45(1), 5-32",
+     "link": "https://doi.org/10.1023/A:1010933404324",
+     "what": "Introduces random forests: many trees, each trained on a random sample with random feature choices, averaged. Accuracy depends on how good each tree is and how little the trees are correlated with each other.",
+     "used": "Random forest is one of the compared models and an ensemble candidate."
+    },
+    {
+     "id": "dietterich2000",
+     "authors": "Dietterich, T. G.",
+     "year": 2000,
+     "title": "Ensemble Methods in Machine Learning",
+     "venue": "Multiple Classifier Systems (MCS 2000), Lecture Notes in Computer Science 1857, 1-15",
+     "link": "https://doi.org/10.1007/3-540-45014-9_1",
+     "what": "Explains why an ensemble can beat its members (statistical, computational and representational reasons) and that members must be accurate and diverse.",
+     "used": "The reason OnTime's blend weights are fitted on out-of-fold predictions, and why a weak, similar member (random forest, extra trees) is given little or no weight."
+    },
+    {
+     "id": "wolpert1992",
+     "authors": "Wolpert, D. H.",
+     "year": 1992,
+     "title": "Stacked generalization",
+     "venue": "Neural Networks, 5(2), 241-259",
+     "link": "https://doi.org/10.1016/S0893-6080(05)80023-1",
+     "what": "Proposes training a second-level model on the held-out predictions of first-level models.",
+     "used": "A stacked meta-learner is evaluated in train_ensemble.py but not served, because it outputs calibrated probabilities that would break OnTime's risk bands."
+    },
+    {
+     "id": "ke2017",
+     "authors": "Ke, G., Meng, Q., Finley, T., Wang, T., Chen, W., Ma, W., Ye, Q., Liu, T.-Y.",
+     "year": 2017,
+     "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+     "venue": "Advances in Neural Information Processing Systems 30 (NeurIPS 2017)",
+     "link": "",
+     "what": "Speeds up gradient boosting with histogram binning, gradient-based sampling and bundling of exclusive features, with similar accuracy.",
+     "used": "scikit-learn's HistGradientBoosting, an ensemble member in OnTime, uses the same histogram idea and reads product category as a true categorical feature."
+    },
+    {
+     "id": "grinsztajn2022",
+     "authors": "Grinsztajn, L., Oyallon, E., Varoquaux, G.",
+     "year": 2022,
+     "title": "Why do tree-based models still outperform deep learning on typical tabular data?",
+     "venue": "NeurIPS 2022 Datasets and Benchmarks Track",
+     "link": "https://arxiv.org/abs/2207.08815",
+     "what": "A benchmark of 45 tabular data sets in which tree-based models stayed ahead of deep-learning models on medium-sized data.",
+     "used": "Why OnTime does not use a neural network for 96,000 rows of mixed numeric and categorical fields."
+    }
+   ]
+  },
+  {
+   "key": "validation",
+   "title": "3. Tuning, leakage and drift",
+   "summary": "Three ways a delivery model can look better than it is: tuning too narrowly, letting future information into the inputs, and assuming next month looks like the training months.",
+   "papers": [
+    {
+     "id": "bergstra2012",
+     "authors": "Bergstra, J., Bengio, Y.",
+     "year": 2012,
+     "title": "Random Search for Hyper-Parameter Optimization",
+     "venue": "Journal of Machine Learning Research, 13, 281-305",
+     "link": "https://jmlr.org/papers/v13/bergstra12a.html",
+     "what": "Shows that random search finds good settings at least as efficiently as grid search because only a few hyperparameters matter for any one data set.",
+     "used": "src/tuning.py: random search over wide ranges, scored by cross-validation on the training rows only, with the current settings as trial 0."
+    },
+    {
+     "id": "kaufman2012",
+     "authors": "Kaufman, S., Rosset, S., Perlich, C., Stitelman, O.",
+     "year": 2012,
+     "title": "Leakage in data mining: Formulation, detection, and avoidance",
+     "venue": "ACM Transactions on Knowledge Discovery from Data, 6(4), Article 15",
+     "link": "https://doi.org/10.1145/2382577.2382579",
+     "what": "Defines leakage (inputs that carry information about the target that would not be available at prediction time) and describes how to detect and avoid it.",
+     "used": "OnTime's past-delay rates use only orders already delivered before the order was placed; notebook 07 and the leakage tests check this."
+    },
+    {
+     "id": "gama2014",
+     "authors": "Gama, J., Zliobaite, I., Bifet, A., Pechenizkiy, M., Bouchachia, A.",
+     "year": 2014,
+     "title": "A survey on concept drift adaptation",
+     "venue": "ACM Computing Surveys, 46(4), Article 44",
+     "link": "https://doi.org/10.1145/2523813",
+     "what": "Surveys how models cope when the relationship between inputs and outcomes changes over time, and how to evaluate adaptive learners.",
+     "used": "OnTime's rolling-origin backtest and the advice to retrain monthly; the dataset adapter retrains on the user's own recent history."
+    }
+   ]
+  },
+  {
+   "key": "imbalance",
+   "title": "4. Imbalanced outcomes and decision thresholds",
+   "summary": "Only about 8% of Olist orders are late. That changes which metric to trust and how to choose the alert line.",
+   "papers": [
+    {
+     "id": "chawla2002",
+     "authors": "Chawla, N. V., Bowyer, K. W., Hall, L. O., Kegelmeyer, W. P.",
+     "year": 2002,
+     "title": "SMOTE: Synthetic Minority Over-sampling Technique",
+     "venue": "Journal of Artificial Intelligence Research, 16, 321-357",
+     "link": "https://doi.org/10.1613/jair.953",
+     "what": "Balances classes by creating synthetic minority examples between real ones.",
+     "used": "A known alternative. OnTime uses class weights instead, which keeps every row real and keeps the probability scale consistent across models."
+    },
+    {
+     "id": "saito2015",
+     "authors": "Saito, T., Rehmsmeier, M.",
+     "year": 2015,
+     "title": "The Precision-Recall Plot Is More Informative than the ROC Plot When Evaluating Binary Classifiers on Imbalanced Datasets",
+     "venue": "PLoS ONE, 10(3), e0118432",
+     "link": "https://doi.org/10.1371/journal.pone.0118432",
+     "what": "Shows that ROC curves can look good on imbalanced data while precision is poor, and that precision-recall plots expose it.",
+     "used": "The Model page reports PR-AUC and precision next to ROC-AUC; the ensemble report compares both."
+    },
+    {
+     "id": "elkan2001",
+     "authors": "Elkan, C.",
+     "year": 2001,
+     "title": "The Foundations of Cost-Sensitive Learning",
+     "venue": "Proceedings of the 17th International Joint Conference on Artificial Intelligence (IJCAI), 973-978",
+     "link": "",
+     "what": "Shows that the best decision threshold follows from the costs of the two kinds of error, and how to adjust a classifier for unequal costs.",
+     "used": "The Alert planner: enter the cost of a check and of a late delivery and it finds the cost-optimal threshold."
+    }
+   ]
+  },
+  {
+   "key": "explain",
+   "title": "5. Explaining individual predictions",
+   "summary": "A coordinator will only act on an alert if the reason is clear.",
+   "papers": [
+    {
+     "id": "lundberg2017",
+     "authors": "Lundberg, S. M., Lee, S.-I.",
+     "year": 2017,
+     "title": "A Unified Approach to Interpreting Model Predictions",
+     "venue": "Advances in Neural Information Processing Systems 30",
+     "link": "https://arxiv.org/abs/1705.07874",
+     "what": "Introduces SHAP, which assigns each input a contribution to a prediction using Shapley values from game theory.",
+     "used": "The 'top reasons' on every order are SHAP contributions."
+    },
+    {
+     "id": "lundberg2020",
+     "authors": "Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., Lee, S.-I.",
+     "year": 2020,
+     "title": "From local explanations to global understanding with explainable AI for trees",
+     "venue": "Nature Machine Intelligence, 2, 56-67",
+     "link": "https://doi.org/10.1038/s42256-019-0138-9",
+     "what": "TreeSHAP: exact SHAP values for tree models in polynomial time, and tools to move from single explanations to global summaries.",
+     "used": "OnTime reads exact TreeSHAP values from XGBoost (pred_contribs). With the ensemble, reasons come from its XGBoost member."
+    }
+   ]
+  },
+  {
+   "key": "adapt",
+   "title": "6. Adapting to a new data set",
+   "summary": "A model trained on Olist will not transfer perfectly to another company's orders. Two responses: map the new data to the same inputs and measure the transfer honestly, or learn from the new company's own history.",
+   "papers": [
+    {
+     "id": "pan2010",
+     "authors": "Pan, S. J., Yang, Q.",
+     "year": 2010,
+     "title": "A Survey on Transfer Learning",
+     "venue": "IEEE Transactions on Knowledge and Data Engineering, 22(10), 1345-1359",
+     "link": "https://doi.org/10.1109/TKDE.2009.191",
+     "what": "Organises transfer learning: when knowledge from a source domain helps (or hurts) in a target domain whose data differ.",
+     "used": "The 'Adapt to your data' page scores your file with the Olist model first (transfer), checks it against your real outcomes, and offers a model trained on your own history when transfer is weak."
+    }
+   ]
+  },
+  {
+   "key": "assistant",
+   "title": "7. A grounded assistant",
+   "summary": "Language models write fluently and can invent facts. Ask OnTime keeps them on a short lead.",
+   "papers": [
+    {
+     "id": "lewis2020",
+     "authors": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Kiela, D., et al.",
+     "year": 2020,
+     "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+     "venue": "Advances in Neural Information Processing Systems 33",
+     "link": "https://arxiv.org/abs/2005.11401",
+     "what": "Combines a language model with retrieved documents so answers draw on external, checkable material.",
+     "used": "The built-in engine first retrieves the relevant facts from the app's own numbers; Gemini or the laptop model only rewrites them."
+    },
+    {
+     "id": "ji2023",
+     "authors": "Ji, Z., Lee, N., Frieske, R., Yu, T., Su, D., Xu, Y., et al.",
+     "year": 2023,
+     "title": "Survey of Hallucination in Natural Language Generation",
+     "venue": "ACM Computing Surveys, 55(12), Article 248",
+     "link": "https://doi.org/10.1145/3571730",
+     "what": "Reviews why generated text can contain unsupported statements and how it is measured and reduced.",
+     "used": "Why the assistant is told to use only the facts it is given, shows its sources, and falls back to the built-in answer on any error or timeout."
+    }
+   ]
+  },
+  {
+   "key": "clusters",
+   "title": "8. Grouping late orders into patterns",
+   "summary": "Clusters are only useful if they are real structure rather than an artefact of the algorithm.",
+   "papers": [
+    {
+     "id": "rousseeuw1987",
+     "authors": "Rousseeuw, P. J.",
+     "year": 1987,
+     "title": "Silhouettes: A graphical aid to the interpretation and validation of cluster analysis",
+     "venue": "Journal of Computational and Applied Mathematics, 20, 53-65",
+     "link": "https://doi.org/10.1016/0377-0427(87)90125-7",
+     "what": "Introduces the silhouette score for judging how well separated clusters are.",
+     "used": "Delay patterns report the silhouette score for every k tried before choosing 6."
+    }
+   ]
+  },
+  {
+   "key": "data",
+   "title": "9. The data",
+   "summary": "",
+   "papers": [
+    {
+     "id": "olist2018",
+     "authors": "Olist",
+     "year": 2018,
+     "title": "Brazilian E-Commerce Public Dataset by Olist",
+     "venue": "Kaggle data set (orders from 2016 to 2018; licence CC BY-NC-SA 4.0)",
+     "link": "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce",
+     "what": "About 100,000 orders placed at Olist Store with items, payments, sellers, customers, products and geolocation. The promised delivery date and the actual delivery date make a late-delivery label possible.",
+     "used": "The training data. Only inputs known when the order is placed are used; delivery outcomes build the label and the evaluation only."
+    }
+   ]
+  }
+ ],
+ "positioning": [
+  "Applied studies of late-delivery prediction typically report one random train/test split. OnTime also reports a rolling monthly backtest, because the Olist late rate swings with the season (a static time split scored 0.475 AUC, the monthly backtest about 0.67).",
+  "Several studies report accuracy. With about 8% late orders accuracy hides the problem, so OnTime reports precision, recall, PR-AUC and the share of late orders caught by the alerts.",
+  "Few studies connect a score to what a coordinator should do. OnTime adds a suggested action per order, a playbook per focus category, delay patterns with recommendations, and a cost-based alert planner.",
+  "Past-delay history is the most consistent signal across the studies (Brintrup et al.). OnTime builds it so that no future information leaks in.",
+  "OnTime can be pointed at another company's data (Adapt to your data) and says how much of the model's input it really received."
+ ],
+ "limits": [
+  "This list is a focused review of the sources most relevant to the project, not a systematic review.",
+  "Domain papers (themes 1 and 9) were checked against their abstract or publisher page on 20 October 2026. The method papers are standard references; check page numbers and formats against your university's citation style before submitting.",
+  "Two entries are master's theses and one is a regional-conference paper; they are listed as examples of the common approach, not as strong evidence."
+ ]
+}

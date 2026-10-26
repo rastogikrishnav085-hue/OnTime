@@ -1,0 +1,25 @@
+ONTIME V5 SYNTHETIC RAW DATASET — FINAL VERIFICATION
+
+Archive: OnTime_v5_synthetic_raw_dataset_trained.zip
+Archive bytes: 134085344
+Archive SHA-256: 7f694d431ccb62f3dbe0e238ad9a8986989c1b6e5bef8edfa59b9496b9b80b5e
+ZIP integrity: PASS (testzip returned no corrupt members)
+
+Synthetic dataset: data/raw/synthetic_operational_orders.csv
+Rows: 80,000
+Columns: 38
+Unique synthetic order IDs: 80,000 / 80,000
+Target values: [0, 1]
+CSV SHA-256: 64dcfb7003d9168e84671841d44eec2bedb1105db3db608474ebe993116b72fd
+Original Olist CSV hash checks: 9/9 PASS (unchanged)
+
+Training split: 56,000 train / 12,000 validation / 12,000 chronological held-out test
+Validation ROC-AUC: 0.936217
+Held-out synthetic test ROC-AUC: 0.943253
+Held-out synthetic test PR-AUC: 0.892701
+Threshold >0.91: PASS (synthetic benchmark only)
+Saved model reload/re-score: PASS (independent test AUC reproduced)
+Feature importance: 16 rows; gain and held-out permutation importances populated
+Full project tests: 200 passed, 2 warnings (existing legacy XGBoost/pickle compatibility warnings)
+
+Important scope note: this score belongs only to simulated dispatch-time data. It does not establish >0.91 on real Olist or production data. Real Olist chronological checkout-model ROC-AUC remains 0.71679. Synthetic CSV is separate from the nine unchanged observed CSVs and is not integrated into production inference.

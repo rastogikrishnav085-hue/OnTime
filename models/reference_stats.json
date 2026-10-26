@@ -1,0 +1,320 @@
+{
+  "numeric": {
+    "n_items": {
+      "min": 1.0,
+      "max": 20.0,
+      "p01": 1.0,
+      "p99": 3.0
+    },
+    "n_distinct_products": {
+      "min": 1.0,
+      "max": 8.0,
+      "p01": 1.0,
+      "p99": 2.0
+    },
+    "n_distinct_sellers": {
+      "min": 1.0,
+      "max": 5.0,
+      "p01": 1.0,
+      "p99": 2.0
+    },
+    "total_price": {
+      "min": 0.85,
+      "max": 13440.0,
+      "p01": 11.99,
+      "p99": 999.0
+    },
+    "avg_item_price": {
+      "min": 0.85,
+      "max": 6735.0,
+      "p01": 10.99,
+      "p99": 935.0
+    },
+    "max_item_price": {
+      "min": 0.85,
+      "max": 6735.0,
+      "p01": 10.99,
+      "p99": 949.0
+    },
+    "total_freight": {
+      "min": 0.0,
+      "max": 1794.96,
+      "p01": 7.39,
+      "p99": 104.45
+    },
+    "avg_freight": {
+      "min": 0.0,
+      "max": 375.28,
+      "p01": 7.39,
+      "p99": 84.9525
+    },
+    "total_order_value": {
+      "min": 9.59,
+      "max": 13664.08,
+      "p01": 22.39,
+      "p99": 1071.1025
+    },
+    "total_weight_g": {
+      "min": 0.0,
+      "max": 184400.0,
+      "p01": 100.0,
+      "p99": 22350.0
+    },
+    "avg_weight_g": {
+      "min": 0.0,
+      "max": 40425.0,
+      "p01": 83.0,
+      "p99": 18250.0
+    },
+    "total_volume_cm3": {
+      "min": 0.0,
+      "max": 1476000.0,
+      "p01": 352.0,
+      "p99": 134648.25
+    },
+    "avg_photos_qty": {
+      "min": 1.0,
+      "max": 20.0,
+      "p01": 1.0,
+      "p99": 8.0
+    },
+    "avg_name_length": {
+      "min": 5.0,
+      "max": 76.0,
+      "p01": 21.0,
+      "p99": 63.0
+    },
+    "avg_description_length": {
+      "min": 4.0,
+      "max": 3992.0,
+      "p01": 87.0,
+      "p99": 3395.0
+    },
+    "purchase_dow": {
+      "min": 0.0,
+      "max": 6.0,
+      "p01": 0.0,
+      "p99": 6.0
+    },
+    "purchase_month": {
+      "min": 1.0,
+      "max": 12.0,
+      "p01": 1.0,
+      "p99": 12.0
+    },
+    "purchase_hour": {
+      "min": 0.0,
+      "max": 23.0,
+      "p01": 0.0,
+      "p99": 23.0
+    },
+    "is_weekend_purchase": {
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0
+    },
+    "approval_delay_hours": {
+      "min": 0.0,
+      "max": 741.4436111111111,
+      "p01": 0.0,
+      "p99": 89.67999999999999
+    },
+    "promised_delivery_days": {
+      "min": 2.0080092592592598,
+      "max": 155.13546296296298,
+      "p01": 6.078888888888889,
+      "p99": 50.323255208333336
+    },
+    "same_state": {
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 1.0
+    },
+    "seller_customer_distance_km": {
+      "min": 0.0,
+      "max": 3399.1909057987573,
+      "p01": 5.723393633312724,
+      "p99": 2482.1656766768383
+    },
+    "n_payment_installments": {
+      "min": 0.0,
+      "max": 24.0,
+      "p01": 1.0,
+      "p99": 10.0
+    },
+    "total_payment_value": {
+      "min": 9.59,
+      "max": 13664.08,
+      "p01": 22.3975,
+      "p99": 1071.105
+    },
+    "n_payment_methods": {
+      "min": 1.0,
+      "max": 2.0,
+      "p01": 1.0,
+      "p99": 2.0
+    },
+    "seller_historical_delay_rate": {
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 0.30969800430841765
+    },
+    "category_historical_delay_rate": {
+      "min": 0.0,
+      "max": 1.0,
+      "p01": 0.0,
+      "p99": 0.1070571291406625
+    },
+    "customer_state_historical_delay_rate": {
+      "min": 0.0,
+      "max": 0.2727272727272727,
+      "p01": 0.0,
+      "p99": 0.1579893979553199
+    }
+  },
+  "categorical": {
+    "product_category": [
+      "agro_industry_and_commerce",
+      "air_conditioning",
+      "art",
+      "arts_and_craftmanship",
+      "audio",
+      "auto",
+      "baby",
+      "bed_bath_table",
+      "books_general_interest",
+      "books_imported",
+      "books_technical",
+      "cds_dvds_musicals",
+      "christmas_supplies",
+      "cine_photo",
+      "computers",
+      "computers_accessories",
+      "consoles_games",
+      "construction_tools_construction",
+      "construction_tools_lights",
+      "construction_tools_safety",
+      "cool_stuff",
+      "costruction_tools_garden",
+      "costruction_tools_tools",
+      "diapers_and_hygiene",
+      "drinks",
+      "dvds_blu_ray",
+      "electronics",
+      "fashio_female_clothing",
+      "fashion_bags_accessories",
+      "fashion_childrens_clothes",
+      "fashion_male_clothing",
+      "fashion_shoes",
+      "fashion_sport",
+      "fashion_underwear_beach",
+      "fixed_telephony",
+      "flowers",
+      "food",
+      "food_drink",
+      "furniture_bedroom",
+      "furniture_decor",
+      "furniture_living_room",
+      "furniture_mattress_and_upholstery",
+      "garden_tools",
+      "health_beauty",
+      "home_appliances",
+      "home_appliances_2",
+      "home_comfort_2",
+      "home_confort",
+      "home_construction",
+      "housewares",
+      "industry_commerce_and_business",
+      "kitchen_dining_laundry_garden_furniture",
+      "la_cuisine",
+      "luggage_accessories",
+      "market_place",
+      "music",
+      "musical_instruments",
+      "office_furniture",
+      "party_supplies",
+      "pc_gamer",
+      "perfumery",
+      "pet_shop",
+      "portateis_cozinha_e_preparadores_de_alimentos",
+      "security_and_services",
+      "signaling_and_security",
+      "small_appliances",
+      "small_appliances_home_oven_and_coffee",
+      "sports_leisure",
+      "stationery",
+      "tablets_printing_image",
+      "telephony",
+      "toys",
+      "unknown",
+      "watches_gifts"
+    ],
+    "customer_state": [
+      "AC",
+      "AL",
+      "AM",
+      "AP",
+      "BA",
+      "CE",
+      "DF",
+      "ES",
+      "GO",
+      "MA",
+      "MG",
+      "MS",
+      "MT",
+      "PA",
+      "PB",
+      "PE",
+      "PI",
+      "PR",
+      "RJ",
+      "RN",
+      "RO",
+      "RR",
+      "RS",
+      "SC",
+      "SE",
+      "SP",
+      "TO"
+    ],
+    "seller_state": [
+      "AM",
+      "BA",
+      "CE",
+      "DF",
+      "ES",
+      "GO",
+      "MA",
+      "MG",
+      "MS",
+      "MT",
+      "PA",
+      "PB",
+      "PE",
+      "PI",
+      "PR",
+      "RJ",
+      "RN",
+      "RO",
+      "RS",
+      "SC",
+      "SE",
+      "SP"
+    ],
+    "payment_type": [
+      "boleto",
+      "credit_card",
+      "debit_card",
+      "voucher"
+    ]
+  },
+  "rate_cols": [
+    "seller_historical_delay_rate",
+    "category_historical_delay_rate",
+    "customer_state_historical_delay_rate"
+  ]
+}

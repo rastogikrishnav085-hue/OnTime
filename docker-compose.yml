@@ -1,0 +1,29 @@
+services:
+  ontime:
+    build: .
+    image: ontime:latest
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      # inside Docker, the laptop engine talks to the ollama container below
+      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434}
+      ONTIME_HOST: 0.0.0.0
+    volumes:
+      - ontime-data:/app/var   # action board + assistant settings survive restarts
+    restart: unless-stopped
+
+  # Optional local AI engine. Start with:  docker compose --profile llm up
+  # then once:                            docker compose exec ollama ollama pull llama3.2
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    volumes:
+      - ollama-models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ontime-data:
+  ollama-models:

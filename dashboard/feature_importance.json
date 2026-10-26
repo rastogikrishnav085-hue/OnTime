@@ -1,0 +1,62 @@
+[
+  {
+    "feature": "purchase_month",
+    "importance": 0.0331
+  },
+  {
+    "feature": "n_distinct_sellers",
+    "importance": 0.0251
+  },
+  {
+    "feature": "customer_state_SP",
+    "importance": 0.0189
+  },
+  {
+    "feature": "promised_delivery_days",
+    "importance": 0.0181
+  },
+  {
+    "feature": "customer_state_historical_delay_rate",
+    "importance": 0.0176
+  },
+  {
+    "feature": "same_state",
+    "importance": 0.0173
+  },
+  {
+    "feature": "customer_state_MG",
+    "importance": 0.0155
+  },
+  {
+    "feature": "product_category_books_technical",
+    "importance": 0.0145
+  },
+  {
+    "feature": "customer_state_PR",
+    "importance": 0.014
+  },
+  {
+    "feature": "customer_state_AL",
+    "importance": 0.0128
+  },
+  {
+    "feature": "product_category_home_confort",
+    "importance": 0.0128
+  },
+  {
+    "feature": "seller_state_SP",
+    "importance": 0.0127
+  },
+  {
+    "feature": "customer_state_BA",
+    "importance": 0.0124
+  },
+  {
+    "feature": "seller_state_RJ",
+    "importance": 0.0119
+  },
+  {
+    "feature": "seller_state_RS",
+    "importance": 0.0112
+  }
+]

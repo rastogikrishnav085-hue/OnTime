@@ -1,0 +1,31 @@
+{
+  "built_utc": "2026-10-24T07:33:51+00:00",
+  "source": "REAL Olist raw files in data/raw (no simulated data)",
+  "rows": 96470,
+  "late_rate": 0.0811,
+  "first_purchase": "2016-09-15 12:16:38",
+  "last_purchase": "2018-08-29 15:00:37",
+  "core_features": 33,
+  "enriched_features": 37,
+  "enriched_share_missing": {
+    "seller_handling_h_hist": 0.0385,
+    "seller_transit_d_hist": 0.0548,
+    "seller_overdue_share": 0.1401,
+    "lane_transit_d_hist": 0.0077,
+    "lane_overdue_share": 0.0232,
+    "promise_minus_lane_transit": 0.0077,
+    "promise_minus_expected": 0.0426,
+    "net_overdue_share": 0.0,
+    "net_late_30d": 0.0041,
+    "cstate_overdue_share": 0.0007,
+    "cust_lat": 0.0027,
+    "cust_lng": 0.0027,
+    "sell_lat": 0.0022,
+    "sell_lng": 0.0022
+  },
+  "leak_rules": [
+    "history uses only orders handed over / delivered strictly before this order's purchase time",
+    "network state uses only 'not yet delivered at purchase time'",
+    "no delivery date, delay, review or tracking column is a feature"
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "monthly": [
+    {
+      "month": "2016-10",
+      "rate": 1.13,
+      "count": 265
+    },
+    {
+      "month": "2017-01",
+      "rate": 3.07,
+      "count": 750
+    },
+    {
+      "month": "2017-02",
+      "rate": 3.21,
+      "count": 1653
+    },
+    {
+      "month": "2017-03",
+      "rate": 5.58,
+      "count": 2546
+    },
+    {
+      "month": "2017-04",
+      "rate": 7.86,
+      "count": 2303
+    },
+    {
+      "month": "2017-05",
+      "rate": 3.61,
+      "count": 3545
+    },
+    {
+      "month": "2017-06",
+      "rate": 3.86,
+      "count": 3135
+    },
+    {
+      "month": "2017-07",
+      "rate": 3.43,
+      "count": 3872
+    },
+    {
+      "month": "2017-08",
+      "rate": 3.32,
+      "count": 4193
+    },
+    {
+      "month": "2017-09",
+      "rate": 5.2,
+      "count": 4150
+    },
+    {
+      "month": "2017-10",
+      "rate": 5.29,
+      "count": 4478
+    },
+    {
+      "month": "2017-11",
+      "rate": 14.31,
+      "count": 7288
+    },
+    {
+      "month": "2017-12",
+      "rate": 8.38,
+      "count": 5513
+    },
+    {
+      "month": "2018-01",
+      "rate": 6.56,
+      "count": 7069
+    },
+    {
+      "month": "2018-02",
+      "rate": 15.99,
+      "count": 6555
+    },
+    {
+      "month": "2018-03",
+      "rate": 21.36,
+      "count": 7003
+    },
+    {
+      "month": "2018-04",
+      "rate": 5.31,
+      "count": 6798
+    },
+    {
+      "month": "2018-05",
+      "rate": 8.24,
+      "count": 6749
+    },
+    {
+      "month": "2018-06",
+      "rate": 1.36,
+      "count": 6096
+    },
+    {
+      "month": "2018-07",
+      "rate": 4.48,
+      "count": 6156
+    },
+    {
+      "month": "2018-08",
+      "rate": 10.39,
+      "count": 6351
+    }
+  ],
+  "state": [
+    {
+      "state": "AL",
+      "rate": 23.93,
+      "n": 397
+    },
+    {
+      "state": "MA",
+      "rate": 19.67,
+      "n": 717
+    },
+    {
+      "state": "PI",
+      "rate": 15.97,
+      "n": 476
+    },
+    {
+      "state": "CE",
+      "rate": 15.32,
+      "n": 1279
+    },
+    {
+      "state": "SE",
+      "rate": 15.22,
+      "n": 335
+    },
+    {
+      "state": "BA",
+      "rate": 14.04,
+      "n": 3256
+    },
+    {
+      "state": "RJ",
+      "rate": 13.47,
+      "n": 12350
+    },
+    {
+      "state": "TO",
+      "rate": 12.77,
+      "n": 274
+    },
+    {
+      "state": "PA",
+      "rate": 12.37,
+      "n": 946
+    },
+    {
+      "state": "ES",
+      "rate": 12.23,
+      "n": 1995
+    }
+  ],
+  "category": [
+    {
+      "category": "audio",
+      "rate": 12.93,
+      "n": 348
+    },
+    {
+      "category": "home_confort",
+      "rate": 10.98,
+      "n": 346
+    },
+    {
+      "category": "books_technical",
+      "rate": 10.94,
+      "n": 256
+    },
+    {
+      "category": "food",
+      "rate": 10.09,
+      "n": 436
+    },
+    {
+      "category": "electronics",
+      "rate": 9.84,
+      "n": 2509
+    },
+    {
+      "category": "construction_tools_lights",
+      "rate": 9.28,
+      "n": 237
+    },
+    {
+      "category": "office_furniture",
+      "rate": 9.24,
+      "n": 1244
+    },
+    {
+      "category": "baby",
+      "rate": 9.23,
+      "n": 2794
+    },
+    {
+      "category": "construction_tools_construction",
+      "rate": 9.17,
+      "n": 731
+    },
+    {
+      "category": "unknown",
+      "rate": 8.98,
+      "n": 1336
+    }
+  ],
+  "distance": [
+    {
+      "bucket": "<100km",
+      "rate": 6.38
+    },
+    {
+      "bucket": "100-300km",
+      "rate": 6.45
+    },
+    {
+      "bucket": "300-700km",
+      "rate": 8.01
+    },
+    {
+      "bucket": "700-1500km",
+      "rate": 8.73
+    },
+    {
+      "bucket": "1500km+",
+      "rate": 13.07
+    }
+  ],
+  "overview": {
+    "total_orders": 96470,
+    "delay_rate": 8.11,
+    "ontime_rate": 91.89,
+    "avg_delay_days": 9.55
+  }
+}

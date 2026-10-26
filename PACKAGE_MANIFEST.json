@@ -1,0 +1,137 @@
+{
+  "package": "OnTime v5 complete all-in-one bundle — LightGBM startup fix",
+  "created_utc": "2026-10-24",
+  "source_data": "Nine original Olist CSV files; raw hashes are listed below and in data/processed/raw_manifest.json.",
+  "raw_datasets": {
+    "olist_customers_dataset.csv": {
+      "bytes": 9033957,
+      "sha256": "983a422239e1712ded753b3bf9ecf47dc73f144d306029dcfa99e70a226883d2"
+    },
+    "olist_geolocation_dataset.csv": {
+      "bytes": 61273883,
+      "sha256": "b514f6fc991b9566aeba02aa5d67e2c3630f034b60a0e05aa0d082a3b66d88d6"
+    },
+    "olist_order_items_dataset.csv": {
+      "bytes": 15438671,
+      "sha256": "0bc4d068c4fe38cbb01bd90e8746e3c613fe7b4baef75fab7b0e329701c3e279"
+    },
+    "olist_order_payments_dataset.csv": {
+      "bytes": 5777138,
+      "sha256": "4f713964f2815dbbaa40b9488268c55aac3627bfce5aa96cf58d1f3616de3cc0"
+    },
+    "olist_order_reviews_dataset.csv": {
+      "bytes": 14451670,
+      "sha256": "012b61c7593e34f51fa614efdf802b9c7056ce6aae5307ddb93236e7cfc797d7"
+    },
+    "olist_orders_dataset.csv": {
+      "bytes": 17654914,
+      "sha256": "8df58ef3d2d7e9944010f7beecd9b75367f5588ec6e3c91cec19ae3345ef9ecf"
+    },
+    "olist_products_dataset.csv": {
+      "bytes": 2379446,
+      "sha256": "3e6569628a17fbc75fd206ee357b59e20364b9afa90f5b6cd5b4d624c58aa9cc"
+    },
+    "olist_sellers_dataset.csv": {
+      "bytes": 174703,
+      "sha256": "1f643d2b950373b85735e7794b20986f528d7a000432e7c6f9bcbb44d0846a0e"
+    },
+    "product_category_name_translation.csv": {
+      "bytes": 2613,
+      "sha256": "a81f0d1f27b27e7293f761bc79e3ce8f348ee39c4b3ed3e49bde38f478586278"
+    }
+  },
+  "model": {
+    "name": "Dispatch operational XGBoost model",
+    "features": 16,
+    "prediction_cutoff": "dispatch time",
+    "real_olist_only": false,
+    "benchmark_type": "synthetic dispatch-time benchmark",
+    "chronological_test_roc_auc": 0.9432527722262533,
+    "chronological_test_pr_auc": 0.8927009431674501,
+    "test_rows": 12000,
+    "scope": "Simulated operational signals and labels; not measured real-world delivery performance."
+  },
+  "verification": {
+    "data_validation": "ACCEPT; 23 checks, 0 failures, 0 warnings",
+    "leakage_audit": "PASS; 70 features at four cut dates",
+    "tests": "211 passed, 2 legacy XGBoost/pickle compatibility warnings; includes regression coverage for a TypeError during optional LightGBM/Dask import.",
+    "live_weather": "Open-Meteo API route and mocked tests pass; live provider request from this build environment failed with URLError, so live external connectivity remains unverified.",
+    "synthetic_dataset": "80,000 rows; 38 columns; 0 duplicate synthetic order IDs; binary target; saved model reloaded and held-out chronological ROC-AUC reproduced at 0.9432527722262533 and PR-AUC 0.8927009431674501; target threshold >0.91 passed for synthetic benchmark only.",
+    "production_model_integration": "PASS; portable dispatch XGBoost JSON is loaded and wired to live single-order and batch scoring. Settings, /api/meta, /api/model, /api/models, the Model page and assistant share the effective live model key.",
+    "frontend_backend_sync": "PASS; frontend syntax check, Python compilation, and live-scoring metadata contract tests pass; model page/API expose the configured model without legacy checkout evaluation metrics.",
+    "deployment_smoke": "PASS; running local HTTP server passed 11 checks covering frontend, readiness, model metadata, summary, risk queue, single-order inference, batch template, and batch inference.",
+    "operational_validation": "PASS for tooling/tests only; a chronological observed-outcome validation CLI now requires timestamped predictions and a separate observed outcomes file. No real-world validation report exists because no actual operational outcomes file is configured.",
+    "lightgbm_startup_fix": "PASS; app runtime does not require LightGBM, import failure is caught, and a regression test verifies engine startup under simulated Dask/pandas descriptor TypeError."
+  },
+  "security": "Local .env, database/settings, virtual environments and caches are excluded from the archive.",
+  "synthetic_benchmark": {
+    "dataset": "data/raw/synthetic_operational_orders.csv",
+    "rows": 80000,
+    "columns": 38,
+    "sha256": "64dcfb7003d9168e84671841d44eec2bedb1105db3db608474ebe993116b72fd",
+    "model": "models/synthetic_operational/xgboost_synthetic_operational.json",
+    "metrics": "models/synthetic_operational/metrics.json",
+    "feature_importance": "models/synthetic_operational/feature_importance.csv",
+    "training_script": "train_synthetic_operational.py",
+    "chronological_test_roc_auc": 0.9432527722262533,
+    "chronological_test_pr_auc": 0.8927009431674501,
+    "train_validation_test_rows": [
+      56000,
+      12000,
+      12000
+    ],
+    "scope": "Synthetic dispatch-time benchmark only; integrated into live dispatch scoring, but not real Olist or real-world production performance."
+  },
+  "production_live_scoring": {
+    "default_model": "synthetic_operational",
+    "model": "models/synthetic_operational/xgboost_synthetic_operational.json",
+    "single_order_scoring": true,
+    "batch_scoring": true,
+    "dispatch_features": 16,
+    "synthetic_test_roc_auc": 0.9432527722262533,
+    "synthetic_test_pr_auc": 0.8927009431674501,
+    "historical_queue_model": "Separate historical order queue based on stored historical features",
+    "scope_note": "Dispatch features and labels are simulated. Scores are labelled SYNTHETIC_BENCHMARK and are not calibrated real-world probabilities.",
+    "upgrade_migration": "Existing saved auto defaults migrate to synthetic_operational; explicit xgboost/enriched choices are preserved."
+  },
+  "important_files": [
+    "PRODUCTION_MODEL_SWITCH.md",
+    "tests/test_synthetic_operational_production.py",
+    "CLEANUP_REMOVAL_REPORT.md",
+    "FINAL_PACKAGE_VERIFICATION.txt",
+    "REAL_WORLD_VALIDATION_GUIDE.md",
+    "scripts/validate_operational_outcomes.py",
+    "scripts/http_smoke_test.py",
+    "tests/test_operational_validation.py",
+    "tests/test_e2e_smoke.py",
+    "REAL_WORLD_VALIDATION_IMPLEMENTATION_REPORT.md"
+  ],
+  "package_file_count_excluding_directory_entries": 243,
+  "cleanup": {
+    "report": "CLEANUP_REMOVAL_REPORT.md",
+    "removed_source_bytes": 9158635,
+    "removed_categories": [
+      "duplicate/unused simulated tracking copies",
+      "unreferenced synthetic sample CSV",
+      "standalone experimental scripts",
+      "superseded handoff document",
+      "superseded duplicate test report",
+      "generated caches/bytecode"
+    ],
+    "local_secrets_or_databases_found": false,
+    "original_olist_csvs_preserved": 9,
+    "full_test_suite": "210 passed, 2 warnings"
+  },
+  "live_scoring_sync": {
+    "model_page_and_backend_metadata_synced": true,
+    "single_order_and_batch_use_configured_model": true,
+    "public_model_endpoint": "Live scoring metadata only; historical checkout evaluation values are not mixed into the active model status payload.",
+    "frontend_cache_bust": "20261024-live-sync",
+    "verification": {
+      "python_compile": "passed",
+      "frontend_js_syntax": "passed",
+      "pytest": "210 passed, 2 compatibility warnings",
+      "deployment_http_smoke": "11 checks passed against a running local server"
+    }
+  }
+}

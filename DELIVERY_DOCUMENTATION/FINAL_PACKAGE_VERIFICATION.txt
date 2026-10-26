@@ -1,0 +1,17 @@
+OnTime v5 production model package verification
+Date: 2026-10-24
+
+Production integration checks
+- Portable synthetic operational XGBoost JSON loads successfully.
+- Default live single-order/batch model on a fresh install: synthetic_operational.
+- Model feature schema: 16 dispatch-time features; target and identifiers excluded.
+- Synthetic raw CSV: 80,000 rows, 38 columns, unique SYNTH_ IDs.
+- Saved model reload reproduces held-out chronological test ROC-AUC 0.9432527722262533 and PR-AUC 0.8927009431674501.
+- Invalid numeric inputs are rejected; CSV batch schema validation is enforced.
+- Feature importance uses model gain and held-out permutation importance.
+- All nine original Olist raw CSV hashes match the prior package manifest.
+- Historical risk queue remains on the real-Olist chronological checkout model.
+- Adapt-to-data retains checkout-time model behavior.
+- Test suite: 204 passed, 2 existing legacy XGBoost/pickle compatibility warnings.
+
+Scope note: the >0.91 metric belongs only to the synthetic dispatch-time benchmark; it is not evidence of real-world performance.

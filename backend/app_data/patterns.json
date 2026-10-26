@@ -1,0 +1,863 @@
+{
+ "n_late": 7826,
+ "k": 6,
+ "silhouette_by_k": {
+  "4": 0.1736,
+  "5": 0.1709,
+  "6": 0.1749,
+  "7": 0.1663
+ },
+ "params": {
+  "mean": [
+   6.02214067911497,
+   21.967114044708563,
+   0.06110174992284737,
+   0.5422949143879376,
+   0.8716523794006736,
+   4.770316793297123,
+   0.21143381932860641,
+   0.26871965244058266,
+   1.374811318867814
+  ],
+  "std": [
+   1.3255499806327324,
+   7.939456621367522,
+   0.07700006916826052,
+   0.4982079286973782,
+   0.7835254960538154,
+   0.8073124581511155,
+   0.12900521420563324,
+   0.44329380870120616,
+   1.5035456239109162
+  ],
+  "centers": [
+   [
+    0.26958405707174554,
+    0.4536703017275512,
+    -0.12102700147152148,
+    0.15477086221469347,
+    1.9545057762680886,
+    1.2270960841873935,
+    -0.29646746933185153,
+    -0.28152076354969585,
+    0.17711587615195049,
+    0.02558635394456287,
+    0.1484008528784647,
+    0.055437100213219556,
+    0.48102345415778247,
+    0.08955223880597026
+   ],
+   [
+    0.44795779046770806,
+    0.29761938321962034,
+    -0.1315833684242848,
+    0.2972020841384944,
+    -0.6480451469941053,
+    -1.089410004811858,
+    1.6575220569326616,
+    -0.49571301102655807,
+    0.08676696555656303,
+    0.032859399684044305,
+    0.19778830963665128,
+    0.0638230647709321,
+    0.3854660347551339,
+    0.12006319115323869
+   ],
+   [
+    0.18538783293798133,
+    0.03784194011766848,
+    4.440768778815214,
+    -0.5184005128624986,
+    0.117926927716059,
+    0.3258892846779704,
+    -0.24264320220581834,
+    -0.05891375343418731,
+    -0.055696744300085,
+    0.01420118343195264,
+    0.12307692307692311,
+    0.07100591715976329,
+    0.49704142011834324,
+    0.09467455621301774
+   ],
+   [
+    -1.345791937486534,
+    -1.1395637740986346,
+    -0.06296428486509764,
+    -0.4139780367780818,
+    -0.12218273427989612,
+    -0.27120590948627943,
+    -0.40126218804706787,
+    1.6484269463075434,
+    0.06224392346682721,
+    -6.591949208711867e-17,
+    0.005211726384365595,
+    0.0013029315960909962,
+    0.7717698154180264,
+    0.021715526601518736
+   ],
+   [
+    0.4057189083228228,
+    0.4014081841616889,
+    -0.14145982805619753,
+    0.918702933549839,
+    -0.23071939794107707,
+    0.20323584063332426,
+    -0.33563248448689,
+    -0.5849271446227775,
+    -0.15628600577157264,
+    0.016211121583411862,
+    0.13232799245994342,
+    0.05768143261074491,
+    0.4512723845428838,
+    0.14250706880301545
+   ],
+   [
+    0.5149081755253644,
+    0.29453602084766295,
+    -0.036416443222007405,
+    -1.0884911362326966,
+    -0.2136895593380776,
+    0.1621198666643102,
+    -0.22027713512881208,
+    -0.6001285840895656,
+    -0.03329974695571928,
+    0.025789120214909353,
+    0.225654801880457,
+    0.059637340496978,
+    0.36480859637340446,
+    0.12411014103425157
+   ]
+  ]
+ },
+ "id_to_rank": {
+  "4": 1,
+  "3": 2,
+  "5": 3,
+  "1": 4,
+  "0": 5,
+  "2": 6
+ },
+ "patterns": [
+  {
+   "id": 4,
+   "n": 2124,
+   "share_of_late": 27.1,
+   "median_distance_km": 649,
+   "median_promised_days": 24.3,
+   "median_actual_days": 33.4,
+   "p75_actual_days": 41.5,
+   "median_days_late": 7.8,
+   "peak_share": 100.0,
+   "median_weight_kg": 0.8,
+   "median_order_value": 129.97,
+   "median_seller_late_rate": 4.2,
+   "median_approval_hours": 0.4,
+   "same_state_share": 0.9,
+   "z": {
+    "distance_km": 0.19,
+    "promised_days": 0.4,
+    "seller_late_rate": -0.14,
+    "peak_season": 0.92,
+    "weight_kg": -0.27,
+    "order_value": -0.02,
+    "freight_share": -0.33,
+    "same_state": -0.58,
+    "approval_hours": -0.11
+   },
+   "distinguishing": [
+    {
+     "feature": "peak_season",
+     "label": "peak-season share",
+     "z": 0.92
+    },
+    {
+     "feature": "same_state",
+     "label": "same-state share",
+     "z": -0.58
+    },
+    {
+     "feature": "promised_days",
+     "label": "promised window",
+     "z": 0.4
+    }
+   ],
+   "regions": [
+    {
+     "key": "South",
+     "share": 17.8,
+     "lift": 1.43
+    },
+    {
+     "key": "North-East",
+     "share": 16.5,
+     "lift": 1.0
+    },
+    {
+     "key": "South-East",
+     "share": 56.4,
+     "lift": 0.89
+    }
+   ],
+   "states": [
+    {
+     "key": "RJ",
+     "share": 33.2,
+     "lift": 1.56
+    },
+    {
+     "key": "RS",
+     "share": 7.5,
+     "lift": 1.53
+    },
+    {
+     "key": "MG",
+     "share": 11.8,
+     "lift": 1.45
+    }
+   ],
+   "categories": [
+    {
+     "key": "watches_gifts",
+     "share": 9.2,
+     "lift": 1.54
+    },
+    {
+     "key": "bed_bath_table",
+     "share": 14.6,
+     "lift": 1.41
+    },
+    {
+     "key": "computers_accessories",
+     "share": 9.0,
+     "lift": 1.4
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 560,
+    "top10_share": 23.8
+   },
+   "logistics": {
+    "delivery_model": {
+     "Hub-and-spoke (national)": 52.0,
+     "Regional hub": 47.9,
+     "Direct (point-to-point)": 0.1
+    },
+    "median_transfers": 2.0,
+    "shipping_mode": {
+     "Standard": 75.1,
+     "Express": 20.4,
+     "Economy": 4.5
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Rio De Janeiro",
+   "name": "Peak-season, interstate orders to the South",
+   "recommendations": [
+    "100% of these orders were placed in Nov or Feb-Mar. Add 3-5 buffer days to promises in those months and book extra carrier capacity two weeks before the peak starts.",
+    "The promise was already generous (median 24 days) and orders still ran 8 days over, which points at stalled shipments: chase any order with no carrier scan after 5 days.",
+    "Almost all of these cross state lines; agree interstate transfer cut-off times with the carrier.",
+    "RJ is over-represented: 33% of this pattern, 1.6x its share of late orders overall. A regional partner carrier for RJ is worth testing."
+   ],
+   "rank": 1
+  },
+  {
+   "id": 3,
+   "n": 1842,
+   "share_of_late": 23.5,
+   "median_distance_km": 81,
+   "median_promised_days": 13.1,
+   "median_actual_days": 17.5,
+   "p75_actual_days": 24.1,
+   "median_days_late": 3.4,
+   "peak_share": 33.6,
+   "median_weight_kg": 0.71,
+   "median_order_value": 93.33,
+   "median_seller_late_rate": 4.9,
+   "median_approval_hours": 0.5,
+   "same_state_share": 99.9,
+   "z": {
+    "distance_km": -0.9,
+    "promised_days": -1.14,
+    "seller_late_rate": -0.06,
+    "peak_season": -0.41,
+    "weight_kg": -0.13,
+    "order_value": -0.19,
+    "freight_share": -0.4,
+    "same_state": 1.65,
+    "approval_hours": 0.04
+   },
+   "distinguishing": [
+    {
+     "feature": "same_state",
+     "label": "same-state share",
+     "z": 1.65
+    },
+    {
+     "feature": "promised_days",
+     "label": "promised window",
+     "z": -1.14
+    },
+    {
+     "feature": "distance_km",
+     "label": "route distance",
+     "z": -0.9
+    },
+    {
+     "feature": "peak_season",
+     "label": "peak-season share",
+     "z": -0.41
+    }
+   ],
+   "regions": [
+    {
+     "key": "South-East",
+     "share": 96.5,
+     "lift": 1.53
+    }
+   ],
+   "states": [
+    {
+     "key": "SP",
+     "share": 91.3,
+     "lift": 2.99
+    }
+   ],
+   "categories": [
+    {
+     "key": "housewares",
+     "share": 6.5,
+     "lift": 1.27
+    },
+    {
+     "key": "auto",
+     "share": 5.0,
+     "lift": 1.19
+    },
+    {
+     "key": "health_beauty",
+     "share": 11.0,
+     "lift": 1.11
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 662,
+    "top10_share": 15.6
+   },
+   "logistics": {
+    "delivery_model": {
+     "Direct (point-to-point)": 70.1,
+     "Regional hub": 29.9
+    },
+    "median_transfers": 0.0,
+    "shipping_mode": {
+     "Standard": 64.9,
+     "Express": 33.3,
+     "Economy": 1.8
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Sao Paulo",
+   "name": "Local last-mile, tight-promise orders to the South-East",
+   "recommendations": [
+    "100% are same-state deliveries that still ran late, which points at last-mile delivery in Sao Paulo. Review the local courier's on-time rate there.",
+    "Stop promising about 13-day delivery for orders like these: they actually took 18 days (median) and 24 days for 1 in 4. Set the minimum promise to 25 days on these routes.",
+    "These are short routes (median 81 km) that still arrive late, so the delay is not transport distance: look at seller dispatch and last-mile delivery instead.",
+    "These delays happen outside peak months, so they are structural (route or seller) rather than capacity-driven."
+   ],
+   "rank": 2
+  },
+  {
+   "id": 5,
+   "n": 1489,
+   "share_of_late": 19.0,
+   "median_distance_km": 765,
+   "median_promised_days": 23.4,
+   "median_actual_days": 30.4,
+   "p75_actual_days": 38.7,
+   "median_days_late": 5.8,
+   "peak_share": 0.0,
+   "median_weight_kg": 0.8,
+   "median_order_value": 123.89,
+   "median_seller_late_rate": 4.8,
+   "median_approval_hours": 0.4,
+   "same_state_share": 0.3,
+   "z": {
+    "distance_km": 0.42,
+    "promised_days": 0.29,
+    "seller_late_rate": -0.04,
+    "peak_season": -1.09,
+    "weight_kg": -0.25,
+    "order_value": -0.03,
+    "freight_share": -0.22,
+    "same_state": -0.6,
+    "approval_hours": -0.05
+   },
+   "distinguishing": [
+    {
+     "feature": "peak_season",
+     "label": "peak-season share",
+     "z": -1.09
+    },
+    {
+     "feature": "same_state",
+     "label": "same-state share",
+     "z": -0.6
+    },
+    {
+     "feature": "distance_km",
+     "label": "route distance",
+     "z": 0.42
+    }
+   ],
+   "regions": [
+    {
+     "key": "North-East",
+     "share": 28.2,
+     "lift": 1.7
+    },
+    {
+     "key": "South",
+     "share": 15.5,
+     "lift": 1.25
+    },
+    {
+     "key": "South-East",
+     "share": 45.6,
+     "lift": 0.72
+    }
+   ],
+   "states": [
+    {
+     "key": "BA",
+     "share": 10.7,
+     "lift": 1.84
+    },
+    {
+     "key": "SC",
+     "share": 6.2,
+     "lift": 1.41
+    },
+    {
+     "key": "MG",
+     "share": 8.3,
+     "lift": 1.02
+    }
+   ],
+   "categories": [
+    {
+     "key": "perfumery",
+     "share": 4.5,
+     "lift": 1.54
+    },
+    {
+     "key": "health_beauty",
+     "share": 14.0,
+     "lift": 1.42
+    },
+    {
+     "key": "watches_gifts",
+     "share": 8.3,
+     "lift": 1.38
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 571,
+    "top10_share": 16.6
+   },
+   "logistics": {
+    "delivery_model": {
+     "Hub-and-spoke (national)": 62.9,
+     "Regional hub": 37.1
+    },
+    "median_transfers": 2.0,
+    "shipping_mode": {
+     "Standard": 74.3,
+     "Express": 21.6,
+     "Economy": 4.1
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Rio De Janeiro",
+   "name": "Off-season, interstate orders to the North-East",
+   "recommendations": [
+    "Pre-position fast-moving stock at the Recife PE hub so orders to the North-East ship regionally instead of travelling a median 765 km; book long-haul express for the rest.",
+    "These delays happen outside peak months, so they are structural (route or seller) rather than capacity-driven.",
+    "Almost all of these cross state lines; agree interstate transfer cut-off times with the carrier.",
+    "BA is over-represented: 11% of this pattern, 1.8x its share of late orders overall. A regional partner carrier for BA is worth testing."
+   ],
+   "rank": 3
+  },
+  {
+   "id": 1,
+   "n": 1264,
+   "share_of_late": 16.2,
+   "median_distance_km": 698,
+   "median_promised_days": 23.5,
+   "median_actual_days": 31.3,
+   "p75_actual_days": 39.0,
+   "median_days_late": 6.6,
+   "peak_share": 69.0,
+   "median_weight_kg": 0.27,
+   "median_order_value": 45.61,
+   "median_seller_late_rate": 4.5,
+   "median_approval_hours": 0.5,
+   "same_state_share": 4.9,
+   "z": {
+    "distance_km": 0.34,
+    "promised_days": 0.3,
+    "seller_late_rate": -0.13,
+    "peak_season": 0.3,
+    "weight_kg": -0.39,
+    "order_value": -0.51,
+    "freight_share": 1.66,
+    "same_state": -0.5,
+    "approval_hours": 0.1
+   },
+   "distinguishing": [
+    {
+     "feature": "freight_share",
+     "label": "freight share of the price",
+     "z": 1.66
+    },
+    {
+     "feature": "order_value",
+     "label": "order value",
+     "z": -0.51
+    },
+    {
+     "feature": "same_state",
+     "label": "same-state share",
+     "z": -0.5
+    },
+    {
+     "feature": "weight_kg",
+     "label": "parcel weight",
+     "z": -0.39
+    }
+   ],
+   "regions": [
+    {
+     "key": "North-East",
+     "share": 24.8,
+     "lift": 1.5
+    },
+    {
+     "key": "South",
+     "share": 15.0,
+     "lift": 1.21
+    },
+    {
+     "key": "South-East",
+     "share": 48.2,
+     "lift": 0.76
+    }
+   ],
+   "states": [
+    {
+     "key": "BA",
+     "share": 7.4,
+     "lift": 1.27
+    },
+    {
+     "key": "MG",
+     "share": 9.7,
+     "lift": 1.2
+    },
+    {
+     "key": "RJ",
+     "share": 24.3,
+     "lift": 1.14
+    }
+   ],
+   "categories": [
+    {
+     "key": "electronics",
+     "share": 11.4,
+     "lift": 3.61
+    },
+    {
+     "key": "telephony",
+     "share": 14.9,
+     "lift": 3.34
+    },
+    {
+     "key": "housewares",
+     "share": 6.6,
+     "lift": 1.29
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 399,
+    "top10_share": 26.6
+   },
+   "logistics": {
+    "delivery_model": {
+     "Hub-and-spoke (national)": 54.9,
+     "Regional hub": 44.2,
+     "Direct (point-to-point)": 0.9
+    },
+    "median_transfers": 2.0,
+    "shipping_mode": {
+     "Express": 55.3,
+     "Standard": 42.3,
+     "Economy": 2.4
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Rio De Janeiro",
+   "name": "Freight-heavy, low-value orders to the North-East",
+   "recommendations": [
+    "Freight is a large share of the price, a sign of hard-to-serve routes: negotiate a regional carrier rate or set a minimum order value for free shipping on these routes.",
+    "Electronics and telephony are 3.6x over-represented here: a category-specific fix (packaging, carrier choice, seller review) reaches a large part of this pattern.",
+    "Low-value orders (median R$ 46): batch them with the seller's other shipments rather than paying for express.",
+    "Almost all of these cross state lines; agree interstate transfer cut-off times with the carrier."
+   ],
+   "rank": 4
+  },
+  {
+   "id": 0,
+   "n": 938,
+   "share_of_late": 12.0,
+   "median_distance_km": 582,
+   "median_promised_days": 24.5,
+   "median_actual_days": 33.1,
+   "p75_actual_days": 42.8,
+   "median_days_late": 6.9,
+   "peak_share": 61.9,
+   "median_weight_kg": 9.68,
+   "median_order_value": 285.93,
+   "median_seller_late_rate": 4.2,
+   "median_approval_hours": 0.7,
+   "same_state_share": 14.4,
+   "z": {
+    "distance_km": 0.14,
+    "promised_days": 0.45,
+    "seller_late_rate": -0.12,
+    "peak_season": 0.15,
+    "weight_kg": 1.78,
+    "order_value": 1.11,
+    "freight_share": -0.3,
+    "same_state": -0.28,
+    "approval_hours": 0.13
+   },
+   "distinguishing": [
+    {
+     "feature": "weight_kg",
+     "label": "parcel weight",
+     "z": 1.78
+    },
+    {
+     "feature": "order_value",
+     "label": "order value",
+     "z": 1.11
+    },
+    {
+     "feature": "promised_days",
+     "label": "promised window",
+     "z": 0.45
+    }
+   ],
+   "regions": [
+    {
+     "key": "North-East",
+     "share": 18.6,
+     "lift": 1.12
+    },
+    {
+     "key": "South-East",
+     "share": 60.1,
+     "lift": 0.95
+    },
+    {
+     "key": "South",
+     "share": 11.2,
+     "lift": 0.9
+    }
+   ],
+   "states": [
+    {
+     "key": "RJ",
+     "share": 26.5,
+     "lift": 1.25
+    },
+    {
+     "key": "MG",
+     "share": 9.9,
+     "lift": 1.22
+    },
+    {
+     "key": "BA",
+     "share": 6.8,
+     "lift": 1.17
+    }
+   ],
+   "categories": [
+    {
+     "key": "office_furniture",
+     "share": 8.8,
+     "lift": 6.02
+    },
+    {
+     "key": "baby",
+     "share": 7.0,
+     "lift": 2.13
+    },
+    {
+     "key": "housewares",
+     "share": 9.2,
+     "lift": 1.8
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 364,
+    "top10_share": 27.1
+   },
+   "logistics": {
+    "delivery_model": {
+     "Regional hub": 47.5,
+     "Hub-and-spoke (national)": 46.7,
+     "Direct (point-to-point)": 5.8
+    },
+    "median_transfers": 1.0,
+    "shipping_mode": {
+     "Standard": 75.7,
+     "Economy": 22.4,
+     "Express": 1.9
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Rio De Janeiro",
+   "name": "Bulky-parcel, high-value orders",
+   "recommendations": [
+    "Parcels are heavy (median 9.7 kg). Route them to a bulky-freight service and book delivery slots with the customer to avoid failed attempts.",
+    "Office furniture and baby are 6.0x over-represented here: a category-specific fix (packaging, carrier choice, seller review) reaches a large part of this pattern.",
+    "High-value orders (median R$ 286): give them tracked, insured shipping and a proactive call when a delay is predicted; they cost the most in refunds.",
+    "The promise was already generous (median 24 days) and orders still ran 7 days over, which points at stalled shipments: chase any order with no carrier scan after 5 days."
+   ],
+   "rank": 5
+  },
+  {
+   "id": 2,
+   "n": 169,
+   "share_of_late": 2.2,
+   "median_distance_km": 596,
+   "median_promised_days": 22.5,
+   "median_actual_days": 29.3,
+   "p75_actual_days": 37.0,
+   "median_days_late": 7.8,
+   "peak_share": 28.4,
+   "median_weight_kg": 0.9,
+   "median_order_value": 138.81,
+   "median_seller_late_rate": 33.3,
+   "median_approval_hours": 0.4,
+   "same_state_share": 24.3,
+   "z": {
+    "distance_km": 0.33,
+    "promised_days": 0.04,
+    "seller_late_rate": 4.44,
+    "peak_season": -0.52,
+    "weight_kg": 0.01,
+    "order_value": 0.27,
+    "freight_share": -0.24,
+    "same_state": -0.06,
+    "approval_hours": -0.01
+   },
+   "distinguishing": [
+    {
+     "feature": "seller_late_rate",
+     "label": "seller's past late rate",
+     "z": 4.44
+    },
+    {
+     "feature": "peak_season",
+     "label": "peak-season share",
+     "z": -0.52
+    }
+   ],
+   "regions": [
+    {
+     "key": "Centre-West",
+     "share": 8.9,
+     "lift": 1.55
+    },
+    {
+     "key": "South-East",
+     "share": 62.1,
+     "lift": 0.99
+    },
+    {
+     "key": "South",
+     "share": 11.8,
+     "lift": 0.95
+    }
+   ],
+   "states": [
+    {
+     "key": "ES",
+     "share": 7.1,
+     "lift": 2.28
+    },
+    {
+     "key": "MG",
+     "share": 8.9,
+     "lift": 1.09
+    },
+    {
+     "key": "SP",
+     "share": 32.5,
+     "lift": 1.07
+    }
+   ],
+   "categories": [
+    {
+     "key": "health_beauty",
+     "share": 23.1,
+     "lift": 2.33
+    },
+    {
+     "key": "housewares",
+     "share": 10.7,
+     "lift": 2.09
+    },
+    {
+     "key": "sports_leisure",
+     "share": 10.1,
+     "lift": 1.35
+    }
+   ],
+   "top_sellers": {
+    "n_sellers": 75,
+    "top10_share": 52.1
+   },
+   "logistics": {
+    "delivery_model": {
+     "Hub-and-spoke (national)": 45.0,
+     "Regional hub": 38.5,
+     "Direct (point-to-point)": 16.6
+    },
+    "median_transfers": 1.0,
+    "shipping_mode": {
+     "Standard": 75.1,
+     "Express": 19.5,
+     "Economy": 5.3
+    },
+    "main_last_mile_hub": "Cajamar SP",
+    "main_first_mile_hub": "Cajamar SP"
+   },
+   "top_city": "Sao Paulo",
+   "name": "Slow-seller, off-season orders to the Centre-West",
+   "recommendations": [
+    "Seller reliability is the lever: the median seller here was already late 33% of the time before these orders. Put sellers above 15% on a 48-hour dispatch SLA with a weekly scorecard; the top 10 sellers alone account for 52% of this pattern.",
+    "Health beauty and housewares are 2.3x over-represented here: a category-specific fix (packaging, carrier choice, seller review) reaches a large part of this pattern.",
+    "These delays happen outside peak months, so they are structural (route or seller) rather than capacity-driven.",
+    "ES is over-represented: 7% of this pattern, 2.3x its share of late orders overall. A regional partner carrier for ES is worth testing."
+   ],
+   "rank": 6
+  }
+ ]
+}
